@@ -1,0 +1,123 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/responsive.scss';
+@import '../../../styles/mixins.scss';
+
+
+.hero{
+
+       
+    @include breakpoint(smaller){
+        margin-top: 26.4rem;
+    }
+   
+    @include breakpoint(medium){
+        margin-top: 18.4rem;
+    }
+   
+    @include breakpoint(large){
+        margin-top: 18.4rem;
+    }
+
+
+
+    .hero__intro{
+        display: flex;
+        justify-content: space-between;
+
+        .hero__line__container{
+            width: 30%;
+        }
+        .line{
+            margin-top: 20.4rem;
+            height: 3px;
+            background-color: $primary-color;
+        }
+
+        .hero__intro__text{
+
+            
+            @include breakpoint(smaller){
+                width: 340px
+            }  
+            
+            @include breakpoint(500px){
+                width: 380px
+            }
+
+            @include breakpoint(medium){
+                width: 563px
+            }
+
+            @include breakpoint(large){
+                width: 58%
+            }
+    
+            // .hero__intro__tag{
+            //     color: $text-color;
+            //     text-transform: uppercase;
+            //     font-weight: $bold;
+            //     font-size: 1.4rem;
+            // }
+            
+            .hero__intro__title{
+                color: $title-color;
+                line-height: $title-height;
+                font-weight: $bold;
+                margin-bottom: 2.4rem;
+                opacity: 0;
+                
+                @include effect-of-appearing;
+                animation-delay: 550ms;
+    
+                @include breakpoint(smaller){             
+                    font-size: $mobile-display;
+                    width: 100%;
+                }
+                
+                @include breakpoint(medium){
+                    font-size: $tablet-display;
+                } 
+                
+                @include breakpoint(large){
+                    font-size: $desktop-display;
+                }
+            }  
+            
+            .hero__intro__text{
+                color: $text-color;
+                line-height: $text-height;
+                font-weight: $regular;
+                margin-bottom: 5.6rem;
+                opacity: 0;
+                
+                @include effect-of-appearing;
+                animation-delay: 900ms;
+    
+    
+                @include breakpoint(smaller){
+                    font-size: $mobile-section-text-large;
+                }
+    
+                @include breakpoint(medium){
+                    font-size: $mobile-section-text-xlarge;
+                    width: 90%;
+                }
+    
+                @include breakpoint(large){
+                    width: 80%;
+                    
+                }
+            }
+
+            .button{
+                @include effect-of-appearing;
+                opacity: 0;
+                animation-delay: 1250ms;
+            }
+           
+        }
+    }
+
+ 
+    
+}

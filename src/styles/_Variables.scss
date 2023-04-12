@@ -1,0 +1,82 @@
+// #general 
+
+// ##screen-sizes
+$mobile: calc(1310px + 40px);
+$tablet: calc(1310px + 40px);
+$desktop: calc(1310px + 80px);
+
+// ##line-height
+$title-height: 130%;
+$text-height: 150%;
+
+// ##font
+$font:'Space Grotesk', sans-serif;
+
+// ###font-sizes
+// ####responsive
+$mobile-links: 2rem;
+$tablet-links: 2.4rem;
+$mobile-display: 3.3rem;
+$tablet-display: 5.6rem;
+$desktop-display: 7.2rem;
+$button-font-size: 1.44rem;
+$mobile-section-tag: 2.88rem;
+$mobile-section-text: 1.6rem;
+$mobile-section-title: 4rem;
+$mobile-section-subtitle: 1.92rem;
+$mobile-section-text-large: 1.8rem;
+$mobile-section-text-xlarge: 2.4rem;
+
+
+// ###weights
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+
+// #colors
+    $strokes: var(--strokes);
+    $dividers: var(--dividers);
+    $bg-color: var(--bg-color);
+    $title-color: var(--title-color);
+    $text-color: var(--text-color);
+    $primary-color: var(--primary-color);
+    $icons-bg: var(--icons-bg);
+    $button-hover-color: var(--button-hover-color);
+    $icon-button-hover-color: var(--icon-button-hover-color);
+    $responsive-menu: var(--responsive-menu);
+    $box-shadow: var(--box-shadow);
+    $error-color: var(--error-color);
+
+// ##light-mode
+.light{
+    --strokes: rgba(7, 7, 7, 0.3);
+    --dividers: rgba(0,0,0,0.1);
+    --bg-color: #f4f4f4;
+    --title-color: #232323;
+    --text-color: #626262;
+    --primary-color: #070707;
+    --icons-bg: #161616;
+    --button-hover-color: #282828;
+    --icon-button-hover-color: #494949;
+    --responsive-menu: #D6D6D6;
+    --box-shadow:rgba(0, 0, 0, 0.25);
+    --error-color: #E12B2B
+}
+
+// ##dark-mode
+.dark{
+    --strokes: rgba(255, 255, 255, 0.3);
+    --dividers: rgba(255,255,255,0.1);
+    --bg-color: #070707;
+    --title-color: #DFDFDF;
+    --text-color: #9C9C9C; 
+    --primary-color: #fff; 
+    --icons-bg: #eaeaea; 
+    --button-hover-color: #D6D6D6; 
+    --icon-button-hover-color: #B7sB7B7;
+    --responsive-menu: #131313;
+    --box-shadow:rgba(250, 250, 250, 0.25);
+    --error-color: #FF4D3B;
+}
+

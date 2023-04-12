@@ -1,0 +1,107 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/responsive.scss';
+@import '../../../styles/mixins.scss';
+
+.about{
+    margin-top: 36.4rem;
+
+    
+    .about__text{
+        display: flex;
+        flex-direction: column;
+        gap: 6.4rem;
+        justify-content: space-between;
+
+        @include breakpoint(1300px){
+            flex-direction: row;
+        }
+
+        .about__tag{
+            color: $primary-color;
+            font-weight: $bold;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: $mobile-section-tag;
+
+            @include breakpoint(1300px){
+                font-size: $mobile-section-title;
+            }
+        }
+
+        .about__description{
+            display: flex;
+            flex-direction: column;
+            gap: 3.2rem;
+
+            @include breakpoint(1300px){
+                width: 50%;
+            }
+
+            .about__title{
+                color: $title-color;
+                font-size: $mobile-section-tag;
+                font-weight: $medium;
+
+                @include breakpoint(1300px){
+                    font-size: $mobile-section-title;
+                }
+            }
+    
+            .about__paragraph{
+                color: $text-color;
+                font-size: $mobile-section-text;
+
+                @include breakpoint(1300px){
+                    font-size: $mobile-section-text-large;
+                }
+            }
+        }
+
+        
+    }
+
+    .about__divider{
+        margin: 8.8rem 0 6.4rem 0;
+       
+        @include breakpoint(1300px){
+            margin-top: 17.9rem;
+        }
+    }
+
+    .services{
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+        @include breakpoint(medium){
+            width: 90%;
+        }
+        @include breakpoint(1300px){
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: space-between;
+        }
+
+        .service{
+            display: flex;
+            flex-direction: column;
+            gap: 2.4rem;
+
+            .title{
+                font-size: $mobile-section-text-xlarge;
+                font-weight: $medium;
+                color: $title-color;
+            }
+
+            .text{
+                font-size: $mobile-section-text-large;
+                color: $text-color;
+            }
+        }
+
+        
+    }
+
+    
+}

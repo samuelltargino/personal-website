@@ -1,0 +1,78 @@
+@mixin breakpoint($screen) {
+
+    @if $screen == smaller {
+        @media(min-width: 375px){
+            @content;
+        } 
+    }
+    
+    @else if $screen == smaller-up{
+        @media(max-width: 375px){
+            @content;
+        } 
+    } 
+    
+    @else if $screen == smaller-max{
+        @media(max-width: 599px){
+            @content;
+        } 
+    }
+
+    @else if $screen == small{
+        @media(min-width: 600px){
+            @content;
+        } 
+    }
+
+    @else if $screen == small-max{
+        @media(max-width: 899px){
+            @content;
+        } 
+    }
+
+    @else if $screen == medium{
+        @media(min-width: 768px){
+            @content;
+        } 
+    }
+    @else if $screen == medium-m{
+        @media(max-width: 930px)  {
+            @content;
+        }
+    }
+    @else if $screen == medium-max{
+        @media(max-width: 1239px){
+            @content;
+        } 
+    }
+
+    @else if $screen == large{
+        @media(min-width: 1440px){
+            @content;
+        } 
+    }
+    
+    @else if $screen == large-max{
+        @media(max-width: 1439px){
+            @content;
+        } 
+    }
+
+    @else if $screen == x-large{
+        @media(min-width: 1440px){
+            @content;
+        } 
+    }
+    
+    @else if $screen == s-large{
+        @media(min-width: 1920px){
+            @content;
+        } 
+    }
+
+    @else{
+        @media (min-width: $screen) {
+            @content;
+        }
+    }
+}

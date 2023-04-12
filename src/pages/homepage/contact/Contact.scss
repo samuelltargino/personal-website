@@ -1,0 +1,37 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/responsive.scss';
+@import '../../../styles/mixins.scss';
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap: 22.4rem;
+
+    
+    @include breakpoint(1000px){
+        padding: 0px 122px ;
+    }
+
+    .contact__container{
+        display: flex;
+        flex-direction: column;
+        gap: 9rem;
+    
+        .contact__display{
+            color: $primary-color;
+            font-size: $mobile-display;
+           
+            @include breakpoint(738px){
+                width: 80%;
+            }
+            
+            @include breakpoint(1000px){
+                width: 85%;
+            }
+            
+            @include breakpoint(1300px){
+                width: 60%;
+            }
+        }
+    }
+}
