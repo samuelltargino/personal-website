@@ -12,23 +12,22 @@ function About() {
         </h3>
         <div className="about__description">
           <h3 className="about__title" data-aos="fade-up">
-            De ideias a realidade: moldamos o digital com arte e tecnologia
+            De ideias a realidade: moldando o digital com arte e tecnologia
           </h3>
           <p
             className="about__paragraph"
             data-aos="fade-up"
             data-aos-delay="500"
           >
-            Seja bem-vindo à Plano de Fundo! Nós somos apaixonados por
-            transformar ideias em soluções digitais impactantes. Combinando arte
-            e tecnologia podemos moldar o digital e entregar resultados que
-            superem as expectativas.
+            Seja bem-vindo ao meu espaço digital! Eu sou apaixonado por
+            transformar ideias em soluções criativas e impactantes. Acredito que
+            a combinação da arte e tecnologia nos permite criar experiências
+            digitais únicas que superam as expectativas.
             <br />
-            <br />
-            Nossa abordagem é personalizada e focada nas necessidades de cada
-            projeto. Se você está procurando por soluções criativas e eficientes
-            para o seu negócio. Estamos animados para juntar forças e criar algo
-            incrível juntos!
+            <br />A minha abordagem é personalizada e focada nas necessidades
+            específicas de cada projeto. Se você está em busca de um parceiro
+            criativo e confiável para o seu projeto, você está no lugar certo.
+            Vamos trabalhar juntos e dar vida às suas ideias!
           </p>
         </div>
       </div>
@@ -41,8 +40,8 @@ function About() {
             Desenvolvimento Web
           </h4>
           <p className="web-development text" data-aos="fade-up">
-            Com habilidades em programação criamos soluções avançadas e
-            personalizadas, elevando a presença online de nossos clientes a um
+            Com habilidades em programação, desenvolvo soluções avançadas e
+            personalizadas, elevando a presença online de qualquer marca à um
             novo patamar.
           </p>
         </div>
@@ -51,8 +50,9 @@ function About() {
             Design de interfaces
           </h4>
           <p className="interface-design text" data-aos="fade-up">
-            Combinamos nossa paixão e anos de experiência para transformar
-            ideias complexas em soluções elegantes e fáceis de usar.
+            Combinando minha paixão por design de interfaces e anos de
+            experiência, transformo ideias complexas em soluções elegantes e
+            fáceis de usar.
           </p>
         </div>
         <div className="visual-design service">

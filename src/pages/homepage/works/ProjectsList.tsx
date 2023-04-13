@@ -3,11 +3,34 @@ import Button from '../../../components/button/Button';
 import { Plus } from "react-feather";
 import { ReactSVG } from "react-svg";
 
-const ProjectsList = (props) => {
+interface ProjectStructure{
+  about?: string,
+  avaliable: string,
+  description: string,
+  id:number,
+  preview: string,
+  image: {
+    path: string,
+    id: number,
+  }[],
+  name: string,
+  scope: string,
+  type: string,
+  year: number,   
+}
+
+interface PropsData{
+ data: ProjectStructure,
+ newData: () => ProjectStructure[],
+ handleSetExpandendProject: (project: ProjectStructure) => void,
+}
+
+const ProjectsList = (props:PropsData) => {
+
 
   return (
     <ul className="works__projects">
-        {props.newData().map((project, index) => (
+        {props.newData().map((project: ProjectStructure, index: number) => (
           <li key={index} className="works__other-projects__layout">
             <div className="works__divider line" data-aos={"fill-in"}></div>
 
@@ -20,7 +43,7 @@ const ProjectsList = (props) => {
                   {project.about}
                 </p>
               </div>
-              <Button link={'#projects'} text={"detalhes"} icon={Plus} data-aos={"fade-up"} event={() => props.handleSetExpandendProject(project, index)}></Button>
+              <Button link={'#projects'} text={"detalhes"} icon={Plus} data-aos={"fade-up"} event={() => props.handleSetExpandendProject(project)}></Button>
             </div>
           </li> 
           ))}

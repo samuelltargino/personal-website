@@ -6,68 +6,68 @@ import kingdomsOfDarknessSVG from "../../../../assets/images/projects/svg/kingdo
 import fusionSVG from "../../../../assets/images/projects/svg/fusion.svg";
 import greenVilleSVG from "../../../../assets/images/projects/svg/green-ville.svg";
 
-// PNG
+// webp
 
 // Macedo Advogados
-import macedoAdvogadosPNG_01 from "../../../../assets/images/projects/png/macedo-advogados_01.png";
-import macedoAdvogadosPNG_02 from "../../../../assets/images/projects/png/macedo-advogados_02.png";
-import macedoAdvogadosPNG_03 from "../../../../assets/images/projects/png/macedo-advogados_03.png";
-import macedoAdvogadosPNG_04 from "../../../../assets/images/projects/png/macedo-advogados_04.png";
+import macedoAdvogadosWEBP_01 from "../../../../assets/images/projects/webp/macedo-advogados_01.webp";
+import macedoAdvogadosWEBP_02 from "../../../../assets/images/projects/webp/macedo-advogados_02.webp";
+import macedoAdvogadosWEBP_03 from "../../../../assets/images/projects/webp/macedo-advogados_03.webp";
+import macedoAdvogadosWEBP_04 from "../../../../assets/images/projects/webp/macedo-advogados_04.webp";
 
 // TaskSpace
-import taskspacePNG_01 from "../../../../assets/images/projects/png/taskspace_01.png";
-import taskspacePNG_02 from "../../../../assets/images/projects/png/taskspace_02.png";
-import taskspacePNG_03 from "../../../../assets/images/projects/png/taskspace_03.png";
-import taskspacePNG_04 from "../../../../assets/images/projects/png/taskspace_04.png";
+import taskspaceWEBP_01 from "../../../../assets/images/projects/webp/taskspace_01.webp";
+import taskspaceWEBP_02 from "../../../../assets/images/projects/webp/taskspace_02.webp";
+import taskspaceWEBP_03 from "../../../../assets/images/projects/webp/taskspace_03.webp";
+import taskspaceWEBP_04 from "../../../../assets/images/projects/webp/taskspace_04.webp";
 
 // Kingdoms of Darkness
-import kingdomsOfDarknessPNG_01 from "../../../../assets/images/projects/png/kingdoms-of-darkness_01.png";
-import kingdomsOfDarknessPNG_02 from "../../../../assets/images/projects/png/kingdoms-of-darkness_02.png";
-import kingdomsOfDarknessPNG_03 from "../../../../assets/images/projects/png/kingdoms-of-darkness_03.png";
-import kingdomsOfDarknessPNG_04 from "../../../../assets/images/projects/png/kingdoms-of-darkness_04.png";
+import kingdomsOfDarknessWEBP_01 from "../../../../assets/images/projects/webp/kingdoms-of-darkness_01.webp";
+import kingdomsOfDarknessWEBP_02 from "../../../../assets/images/projects/webp/kingdoms-of-darkness_02.webp";
+import kingdomsOfDarknessWEBP_03 from "../../../../assets/images/projects/webp/kingdoms-of-darkness_03.webp";
+import kingdomsOfDarknessWEBP_04 from "../../../../assets/images/projects/webp/kingdoms-of-darkness_04.webp";
 
 // Fusion
-import fusionPNG_01 from "../../../../assets/images/projects/png/fusion_01.png";
-import fusionPNG_02 from "../../../../assets/images/projects/png/fusion_02.png";
-import fusionPNG_03 from "../../../../assets/images/projects/png/fusion_03.png";
-import fusionPNG_04 from "../../../../assets/images/projects/png/fusion_04.png";
+import fusionWEBP_01 from "../../../../assets/images/projects/webp/fusion_01.webp";
+import fusionWEBP_02 from "../../../../assets/images/projects/webp/fusion_02.webp";
+import fusionWEBP_03 from "../../../../assets/images/projects/webp/fusion_03.webp";
+import fusionWEBP_04 from "../../../../assets/images/projects/webp/fusion_04.webp";
 
 // green-ville
-import greenVillePNG_01 from "../../../../assets/images/projects/png/green-ville_01.png";
-import greenVillePNG_02 from "../../../../assets/images/projects/png/green-ville_02.png";
-import greenVillePNG_03 from "../../../../assets/images/projects/png/green-ville_03.png";
-import greenVillePNG_04 from "../../../../assets/images/projects/png/green-ville_04.png";
+import greenVilleWEBP_01 from "../../../../assets/images/projects/webp/green-ville_01.webp";
+import greenVilleWEBP_02 from "../../../../assets/images/projects/webp/green-ville_02.webp";
+import greenVilleWEBP_03 from "../../../../assets/images/projects/webp/green-ville_03.webp";
+import greenVilleWEBP_04 from "../../../../assets/images/projects/webp/green-ville_04.webp";
 
-const PNG = {
+const WEBP = {
   // Macedo Advogaodos
-  macedoAdvogadosPNG_01: macedoAdvogadosPNG_01,
-  macedoAdvogadosPNG_02: macedoAdvogadosPNG_02,
-  macedoAdvogadosPNG_03: macedoAdvogadosPNG_03,
-  macedoAdvogadosPNG_04: macedoAdvogadosPNG_04,
+  macedoAdvogadosWEBP_01: macedoAdvogadosWEBP_01,
+  macedoAdvogadosWEBP_02: macedoAdvogadosWEBP_02,
+  macedoAdvogadosWEBP_03: macedoAdvogadosWEBP_03,
+  macedoAdvogadosWEBP_04: macedoAdvogadosWEBP_04,
 
   // TaskSpace
-  taskspacePNG_01: taskspacePNG_01,
-  taskspacePNG_02: taskspacePNG_02,
-  taskspacePNG_03: taskspacePNG_03,
-  taskspacePNG_04: taskspacePNG_04,
+  taskspaceWEBP_01: taskspaceWEBP_01,
+  taskspaceWEBP_02: taskspaceWEBP_02,
+  taskspaceWEBP_03: taskspaceWEBP_03,
+  taskspaceWEBP_04: taskspaceWEBP_04,
 
   // Kingdoms of Darkness
-  kingdomsOfDarknessPNG_01: kingdomsOfDarknessPNG_01,
-  kingdomsOfDarknessPNG_02: kingdomsOfDarknessPNG_02,
-  kingdomsOfDarknessPNG_03: kingdomsOfDarknessPNG_03,
-  kingdomsOfDarknessPNG_04: kingdomsOfDarknessPNG_04,
+  kingdomsOfDarknessWEBP_01: kingdomsOfDarknessWEBP_01,
+  kingdomsOfDarknessWEBP_02: kingdomsOfDarknessWEBP_02,
+  kingdomsOfDarknessWEBP_03: kingdomsOfDarknessWEBP_03,
+  kingdomsOfDarknessWEBP_04: kingdomsOfDarknessWEBP_04,
 
   // Fusion
-  fusionPNG_01: fusionPNG_01,
-  fusionPNG_02: fusionPNG_02,
-  fusionPNG_03: fusionPNG_03,
-  fusionPNG_04: fusionPNG_04,
+  fusionWEBP_01: fusionWEBP_01,
+  fusionWEBP_02: fusionWEBP_02,
+  fusionWEBP_03: fusionWEBP_03,
+  fusionWEBP_04: fusionWEBP_04,
 
   // green-ville
-  greenVillePNG_01: greenVillePNG_01,
-  greenVillePNG_02: greenVillePNG_02,
-  greenVillePNG_03: greenVillePNG_03,
-  greenVillePNG_04: greenVillePNG_04,
+  greenVilleWEBP_01: greenVilleWEBP_01,
+  greenVilleWEBP_02: greenVilleWEBP_02,
+  greenVilleWEBP_03: greenVilleWEBP_03,
+  greenVilleWEBP_04: greenVilleWEBP_04,
 };
 
 const SVG = {
@@ -78,4 +78,4 @@ const SVG = {
   greenVilleSVG: greenVilleSVG,
 };
 
-export { PNG, SVG };
+export { WEBP, SVG };

@@ -3,7 +3,7 @@ import React from "react";
 import "../../styles/styles.scss";
 
 interface ButtonProps {
-  // event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+  event?: React.MouseEventHandler<HTMLButtonElement>,
   type?: string;
   link?: string,
   text: string
@@ -17,7 +17,7 @@ function Button(props:ButtonProps) {
       <button
       className="button"
       data-aos={"fade-up"}
-      // onClick={props.event}
+      onClick={props.event}
       >
       {props.text}
       <div className="icon">
