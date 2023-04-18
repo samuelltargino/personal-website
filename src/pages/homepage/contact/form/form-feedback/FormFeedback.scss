@@ -1,0 +1,47 @@
+@import '../../../../../styles/variables.scss';
+@import '../../../../../styles/responsive.scss';
+@import '../../../../../styles/mixins.scss';
+
+
+.feedback-container{
+    .feedback-tag{
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        font-weight: $medium;
+        gap: 16px;
+        color: $text-color;
+        margin-bottom: 1.6rem;
+        font-size: $button-font-size;
+      
+
+        @include breakpoint(768px){
+            font-size: $mobile-section-text;
+        }
+
+    }
+    
+    .feedback-title{
+        font-size: $mobile-section-title;
+        color: $primary-color;
+        margin-bottom: 2.4rem;
+
+        @include breakpoint(768px){
+            font-size: $tablet-display;
+        }
+
+    }
+    
+    .feedback-text{
+        color: $text-color;
+        font-size: $mobile-section-text-large;
+        margin-bottom: 6.4rem;
+
+        @include breakpoint(768px){
+            font-size: $tablet-links;
+            width: 65%;
+        }
+
+    }
+}
+

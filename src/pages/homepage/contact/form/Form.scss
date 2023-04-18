@@ -1,6 +1,24 @@
 @import '../../../../styles/_Responsive.scss';
 @import '../../../../styles/_Variables.scss';
 
+
+.contact__display{
+    color: $primary-color;
+    font-size: $mobile-display;
+   
+    @include breakpoint(738px){
+        width: 80%;
+    }
+    
+    @include breakpoint(1000px){
+        width: 85%;
+    }
+    
+    @include breakpoint(1300px){
+        width: 60%;
+    }
+}
+
 .contact__form{
     display: flex;
     flex-direction: column;
@@ -45,7 +63,7 @@
             color: $error-color;
         }
 
-        input{
+        input, #phone-input{
             background-color: transparent;
             color: $primary-color;
 

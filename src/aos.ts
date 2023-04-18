@@ -5,6 +5,8 @@ const init = () => {
   const fillIn = "fill-in-init";
   let threshold = window.innerHeight - 50;
 
+ 
+
   delay.forEach((element) => {
     element.style.transitionDelay = element.dataset.aosDelay || "0ms";
   });
@@ -12,6 +14,7 @@ const init = () => {
   function fadeUpEffect(element: HTMLElement) {
     const prevClass = element.className;
     const elementTop = element.getBoundingClientRect().top;
+
 
     if (elementTop < threshold && !prevClass.includes(fadeUp)) {
       element.classList.add(fadeUp);

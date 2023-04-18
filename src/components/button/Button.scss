@@ -37,6 +37,10 @@ a{
             
             }
         }
+
+        &:active{
+            box-shadow: none;
+        }
         
         .icon{
             color: $bg-color;

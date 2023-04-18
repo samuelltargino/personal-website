@@ -4,7 +4,7 @@ import "../../styles/styles.scss";
 
 interface ButtonProps {
   event?: React.MouseEventHandler<HTMLButtonElement>,
-  type?: string;
+  type?: "button" | "submit";
   link?: string,
   text: string
   icon: React.FC<React.SVGProps<SVGSVGElement>>
@@ -15,6 +15,7 @@ function Button(props:ButtonProps) {
   return (
     <a href={props.link}>
       <button
+      type={props.type}
       className="button"
       data-aos={"fade-up"}
       onClick={props.event}

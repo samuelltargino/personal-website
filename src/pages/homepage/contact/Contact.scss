@@ -16,22 +16,5 @@
         display: flex;
         flex-direction: column;
         gap: 9rem;
-    
-        .contact__display{
-            color: $primary-color;
-            font-size: $mobile-display;
-           
-            @include breakpoint(738px){
-                width: 80%;
-            }
-            
-            @include breakpoint(1000px){
-                width: 85%;
-            }
-            
-            @include breakpoint(1300px){
-                width: 60%;
-            }
-        }
     }
 }

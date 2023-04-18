@@ -1,16 +1,30 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import Form from "./form/Form";
+import FormFeedback from "./form/form-feedback/FormFeedback";
 import Footer from "../../../components/footer/Footer";
+import AOS from '../../../aos'
 
 const Contact = () => {
+  const [theMessageWasSent, setTheMessageWasSent] = useState(false)
+
+  useEffect(() => {
+    AOS.init();
+  }, [theMessageWasSent]);
+
+  function handleCheckIfMessageWasSent(state:boolean){
+    setTheMessageWasSent(state)
+  }
+
+
   return (
     <section className="contact" id="contact">
       <div className="contact__container">
-        <h3 className="contact__display" data-aos="fade-up">
-          Estou aguardando o seu contato, deixe uma mensagem {"\u{1F44B}"}
-        </h3>
 
-        <Form></Form>
+        {!theMessageWasSent ? ( 
+          <Form setTheMessageWasSent={handleCheckIfMessageWasSent} />
+        ) : (
+          <FormFeedback setTheMessageWasSent={handleCheckIfMessageWasSent}/>        
+        )}
       </div>
 
       <Footer></Footer>

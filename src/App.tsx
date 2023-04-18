@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Header from "./components/header/Header";
 import Hero from "./pages/homepage/hero/Hero";
 import About from "./pages/homepage/about/About";
 import Works from "./pages/homepage/works/Works";
 import Contact from "./pages/homepage/contact/Contact";
-import Footer from "./components/footer/Footer";
 
 import AOS from "./aos";
 
@@ -12,9 +11,11 @@ import AOS from "./aos";
 import "./styles/styles.scss";
 
 function App() {
+  
   useEffect(() => {
     AOS.init();
   }, []);
+
   function useWindowSize() {
     const [windowSize, setWindowSize] = useState({
       width: window.innerWidth,

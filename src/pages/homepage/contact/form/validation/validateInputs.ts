@@ -1,95 +1,27 @@
-interface Data{
-  name: string,
-  email: string,
-  subject: string,
-  phone: string,
-  message: string,
-}
+import { z } from 'zod'
 
-const validateInputs = (formData:Data) => {
+const validateFormSchema = z.object({
+  name: z.string()
+  .min(3, "O nome deve ter pelo menos 3 caracteres")
+  .max(45, "O nome deve ter no máximo 45 caracteres")
+  .nonempty("Por favor, preencha este campo")
+  .transform(name => (
+    name.trim().split(' ').map(word =>(
+      word[0].toLocaleUpperCase().concat(word.substring(1))
+    )).join(' ')
+  )),
+  email: z.string()
+  .email("Por favor, informe um endereço de email válido.")
+  .nonempty("Por favor, preencha este campo")
+  .toLowerCase(),
+  subject: z.string()
+  .nonempty("Por favor, preencha este campo"),
+  phone: z.string()
+  .regex(/^\(\d{2}\)\s\d\s\d{4}-\d{4}$/,"Digite um número de telefone válido")
+  .nonempty("Por favor, preencha este campo"),
+  message: z.string()
+  .nonempty("Por favor, digite uma mensagem"),
+})
 
-  interface Errors{
-    [key: string]:{}
-  }
 
-  const errors:Errors = {};
-  const errorMessage = "Por favor, preencha este campo";
-
-  interface ItemsWithError {
-    [key: string]: {
-      field: string;
-      label: string;
-    };
-  }
-  
-
-  const itemsWithError:ItemsWithError = {};
-
-  if (!formData.name) {
-    itemsWithError.name = {
-      field: "input-error",
-      label: "label-error",
-    };
-    errors.name = errorMessage;
-  } else if (formData.name) {
-    itemsWithError.name = {
-      field: "initial",
-      label: "initial",
-    };
-  }
-
-  if (!formData.email) {
-    itemsWithError.email = {
-      field: "input-error",
-      label: "label-error",
-    };
-    errors.email = errorMessage;
-  } else if (formData.email) {
-    itemsWithError.email = {
-      field: "initial",
-      label: "initial",
-    };
-  }
-  if (!formData.subject) {
-    itemsWithError.subject = {
-      field: "input-error",
-      label: "label-error",
-    };
-    errors.subject = errorMessage;
-  } else if (formData.subject) {
-    itemsWithError.subject = {
-      field: "initial",
-      label: "initial",
-    };
-  }
-
-  if (!formData.phone) {
-    itemsWithError.phone = {
-      field: "input-error",
-      label: "label-error",
-    };
-    errors.phone = errorMessage;
-  } else if (formData.phone) {
-    itemsWithError.phone = {
-      field: "initial",
-      label: "initial",
-    };
-  }
-
-  if (!formData.message) {
-    itemsWithError.message = {
-      field: "input-error",
-      label: "label-error",
-    };
-    errors.message = errorMessage;
-  } else if (formData.message) {
-    itemsWithError.message = {
-      field: "initial",
-      label: "initial",
-    };
-  }
-
-  return { errors, itemsWithError };
-};
-
-export default validateInputs;
+export default validateFormSchema
