@@ -83,6 +83,7 @@
     
             p{
                 cursor: pointer;
+                font-family: $font;
                 font-size: $mobile-section-text-large;
                 color: $primary-color;
                 opacity: 0.6;
@@ -94,6 +95,7 @@
                     transition: opacity 400ms linear;
                 }
             }
+
         }
     }
     

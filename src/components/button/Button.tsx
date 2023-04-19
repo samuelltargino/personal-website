@@ -6,6 +6,8 @@ interface ButtonProps {
   event?: React.MouseEventHandler<HTMLButtonElement>,
   type?: "button" | "submit";
   link?: string,
+  className?: string;
+  disabled?: boolean;
   text: string
   icon: React.FC<React.SVGProps<SVGSVGElement>>
 }
@@ -19,10 +21,11 @@ function Button(props:ButtonProps) {
       className="button"
       data-aos={"fade-up"}
       onClick={props.event}
+      disabled={props.disabled}
       >
       {props.text}
       <div className="icon">
-        <Icon></Icon>
+        <Icon className={props.className}></Icon>
       </div>
     </button></a>
   );

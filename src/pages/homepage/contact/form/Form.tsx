@@ -2,10 +2,12 @@ import React, { useState, forwardRef } from "react";
 import Button from "../../../../components/button/Button";
 import validateInputs from './validation/validateInputs'
 import { PatternFormat, PatternFormatProps} from 'react-number-format'
-import { ChevronRight } from "react-feather";
+import { ChevronRight, Loader } from "react-feather";
 import { useForm } from 'react-hook-form'
 import { zodResolver} from '@hookform/resolvers/zod'
 import { z } from 'zod'
+import emailjs from '@emailjs/browser'
+
 interface FormProps{
     setTheMessageWasSent: (value: boolean) => void
 }
@@ -28,12 +30,30 @@ const Form = (props:FormProps) => {
     resolver: zodResolver(validateInputs)
   })
 
-  const sendEmail = (data: any) => {
-    console.log(data)
-    // event.preventDefault();
-    // setErrors(validateInputs(formData).errors);
-    // setErrorClassName(validateInputs(formData).itemsWithError);
+  const [isLoading, setIsLoading] = useState(false)
 
+  const sendMessage = (data: any) => {
+
+
+    const templateParamsOFUserContact = {
+      from_name: data.name,
+      from_email: data.email,
+      from_phone: data.phone,
+      message: data.message,
+      subject: data.subject,
+    }
+
+    setIsLoading(true)
+
+    emailjs.send(
+      'service_cmp2fir',
+      'template_mb109pl',
+      templateParamsOFUserContact,
+      'Lz00oCyTLKnVpgCCj'
+      ).then((res)=>{
+        setIsLoading(false)
+        props.setTheMessageWasSent(true)
+      })
   };
 
   return (
@@ -44,7 +64,7 @@ const Form = (props:FormProps) => {
 
       <form 
       className="contact__form" 
-      onSubmit={handleSubmit(sendEmail)}
+      onSubmit={handleSubmit(sendMessage)}
       autoComplete="off"
       >
         <div
@@ -141,10 +161,11 @@ const Form = (props:FormProps) => {
         </div>
 
         <Button
+          disabled={isLoading}
           type="submit"
-          text={"enviar mensagem"}
-          icon={ChevronRight}
-          // event={() => props.setTheMessageWasSent(true)}
+          text={isLoading ? 'Enviando...' : 'enviar mensagem'}
+          className={isLoading ? "loader" : ''}
+          icon={isLoading ? Loader : ChevronRight}
         ></Button>
       </form>
     </>

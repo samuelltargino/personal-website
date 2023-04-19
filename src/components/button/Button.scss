@@ -1,5 +1,7 @@
 @import '../../styles/variables.scss';
 @import '../../styles/mixins.scss';
+@import '../../styles/keyframes.scss';
+
 
 a{
     text-decoration: none;
@@ -54,6 +56,48 @@ a{
 
             @include colors-transition;
 
+            .loader{
+
+                :nth-child(1) {
+                    animation: loader 3s infinite;
+                    animation-delay: 0s;
+
+                }
+
+                :nth-child(8) {
+                    animation: loader 3s infinite;
+                    animation-delay: .3s;
+                }
+                  
+                :nth-child(6) {
+                    animation: loader 3s infinite;
+                    animation-delay: .6s;
+                }
+                  
+                :nth-child(4) {
+                    animation: loader 3s infinite;
+                    animation-delay: .9s;
+                }
+                :nth-child(2) {
+                    animation: loader 3s infinite;
+                    animation-delay: 1.2s;
+                }
+
+                :nth-child(7) {
+                    animation: loader 3s infinite;
+                    animation-delay: 1.5s;
+                }
+                :nth-child(5) {
+                    animation: loader 3s infinite;
+                    animation-delay: 1.8s;
+                }
+                :nth-child(3) {
+                    animation: loader 3s infinite;
+                    animation-delay: 2.1s;
+                }
+            }
+
+           
 
         }
     }

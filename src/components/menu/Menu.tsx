@@ -40,8 +40,10 @@ function Menu(props:MenuProps) {
     const windowSize = window.innerWidth
 
     if(windowSize < 1300){
+    const href = event.currentTarget.href
+
       setTimeout(()=>{
-        window.location.href = event.currentTarget.href 
+        window.location.href = href
       }, 400)
       props.handleExpandMenu('open')
     } else {

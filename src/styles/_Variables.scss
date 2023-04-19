@@ -11,9 +11,16 @@ $text-height: 150%;
 
 // ##font
 $font:'Space Grotesk', sans-serif;
+$emoji-font: 
+    "Segoe UI Emoji",
+    "Noto Color Emoji",
+    "Apple Color Emoji",
+    "Segoe UI",
+    sans-serif;
 
 // ###font-sizes
 // ####responsive
+$tooltip: 1rem;
 $mobile-links: 2rem;
 $tablet-links: 2.4rem;
 $mobile-display: 3.3rem;
