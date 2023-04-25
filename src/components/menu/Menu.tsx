@@ -15,7 +15,7 @@ function Menu(props:MenuProps) {
   const links = [
     {
       href: "#about",
-      text: "Sobre nós",
+      text: "Sobre mim",
     },
 
     {
