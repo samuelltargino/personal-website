@@ -8,6 +8,7 @@ interface ProjectStructure {
   avaliable: string;
   description: string;
   id: number;
+  preview?: string;
   image: {
     path: string;
     id: number;
@@ -20,7 +21,7 @@ interface ProjectStructure {
 }
 
 function Works() {
-  const expanded = {
+  const [expandedProject, setexpandedProject] = useState<ProjectStructure>({
     id: projectData[0].id,
     preview: projectData[0].preview,
     image: projectData[0].image,
@@ -30,23 +31,10 @@ function Works() {
     year: projectData[0].year,
     type: projectData[0].type,
     scope: projectData[0].scope,
-  };
+  });
 
-  const [expandedProject, setExpandendProject] =
-    useState<ProjectStructure>(expanded);
-
-  function handleSetExpandedProject(project: ProjectStructure) {
-    setExpandendProject({
-      id: project.id,
-      image: project.image,
-      name: project.name,
-      avaliable: project.avaliable,
-      description: project.description,
-      year: project.year,
-      type: project.type,
-      scope: project.scope,
-    });
-  }
+  const handleSetexpandedProject = (project: ProjectStructure) =>
+    setexpandedProject({ ...project });
 
   const handleChangeProjectList = () => {
     const newData = projectData.filter(
@@ -69,15 +57,14 @@ function Works() {
 
       <ProjectSlider
         expandedProject={expandedProject}
-        handleSetExpandedProject={handleSetExpandedProject}
+        handleSetexpandedProject={handleSetexpandedProject}
       />
 
       <ProjectDescription expandedProject={expandedProject} />
 
       <ProjectsList
         newData={handleChangeProjectList}
-        handleSetExpandedProject={handleSetExpandedProject}
-        data={expanded}
+        handleSetexpandedProject={handleSetexpandedProject}
       ></ProjectsList>
       <div className="works__divider line last-line" data-aos={"fill-in"}></div>
     </section>

@@ -21,9 +21,8 @@ interface ProjectStructure {
 }
 
 interface PropsData {
-  data: ProjectStructure;
   newData: () => ProjectStructure[];
-  handleSetExpandedProject: (project: ProjectStructure) => void;
+  handleSetexpandedProject: (project: ProjectStructure) => void;
 }
 
 const ProjectsList = (props: PropsData) => {
@@ -45,7 +44,7 @@ const ProjectsList = (props: PropsData) => {
               text={"detalhes"}
               icon={Plus}
               data-aos={"fade-up"}
-              event={() => props.handleSetExpandedProject(project)}
+              event={() => props.handleSetexpandedProject(project)}
             ></Button>
           </div>
         </li>

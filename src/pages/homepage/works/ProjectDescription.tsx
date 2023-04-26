@@ -17,14 +17,11 @@ interface ProjectStructure {
   year: number;
 }
 
-type ExpandedProjectProps = {
+type expandedProjectProps = {
   expandedProject: ProjectStructure;
 };
 
-const ProjectDescription = (props: ExpandedProjectProps) => {
-  {
-    console.log(props);
-  }
+const ProjectDescription = (props: expandedProjectProps) => {
   return (
     <div>
       <div className="works__description">

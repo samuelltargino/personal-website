@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef, useMemo } from "react";
 import { Blurhash } from "react-blurhash";
 
 interface ProjectStructure {
@@ -16,48 +16,54 @@ interface ProjectStructure {
   year: number;
 }
 
-type ExpandedProjectProps = {
+type expandedProjectProps = {
   expandedProject: ProjectStructure;
-  handleSetExpandedProject: (project: ProjectStructure) => void;
+  handleSetexpandedProject: (project: ProjectStructure) => void;
 };
 
-const ProjectSlider = (props: ExpandedProjectProps) => {
-  const [imagesAreLoaded, setImagesAreLoaded] = useState(false);
+const loadImage = (src: string): Promise<HTMLImageElement> => {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.src = src;
+    img.onload = () => resolve(img);
+    img.onerror = reject;
+  });
+};
 
-  const imageSizes = () => {
-    const imageDimensions = document.querySelector("img");
-    return {
-      imageHeight: imageDimensions?.height,
-      imageWidth: imageDimensions?.width,
-    };
-  };
-
-  const imagesPreLoad = () => {
-    let loadedImages = 0;
-
-    props.expandedProject.image.forEach((item) => {
-      const imagesToLoad = props.expandedProject.image.length;
-      const imagePreLoader = new Image();
-
-      imagePreLoader.src = item.path;
-
-      imagePreLoader.onload = () => {
-        loadedImages++;
-        loadedImages === imagesToLoad && setImagesAreLoaded(true);
-      };
-    });
-  };
-
-  useEffect(() => {
-    imageSizes();
-  }, [props.expandedProject]);
-
-  useEffect(() => {
-    console.log(1);
-    imagesPreLoad();
-  }, [props.handleSetExpandedProject]);
-
+const ProjectSlider = (props: expandedProjectProps) => {
   const [projectID, setProjectID] = useState(0);
+  const [imagesAreLoaded, setImagesAreLoaded] = useState(false);
+  const [blurHashDimensions, setBlurHashDimensions] = useState<{
+    width?: number | undefined;
+    height?: number | undefined;
+  }>({
+    width: undefined,
+    height: undefined,
+  });
+  const imageFieldRef = useRef<HTMLDivElement>(null);
+
+  const loadedImages = useMemo(
+    () => props.expandedProject.image.map((item) => loadImage(item.path)),
+    [props.expandedProject]
+  );
+
+  useEffect(() => {
+    Promise.all(loadedImages)
+      .then(() => {
+        setImagesAreLoaded(true);
+      })
+      .catch((error) => {
+        console.error("Error loading images:", error);
+      });
+  }, [loadedImages]);
+
+  useEffect(() => {
+    imageFieldRef &&
+      setBlurHashDimensions({
+        width: imageFieldRef.current?.offsetWidth,
+        height: imageFieldRef.current?.offsetHeight,
+      });
+  }, [imagesAreLoaded, window.onresize]);
 
   const activeSlider = (event: React.MouseEvent<HTMLSpanElement>) => {
     const element = event.target as HTMLElement;
@@ -67,10 +73,14 @@ const ProjectSlider = (props: ExpandedProjectProps) => {
     if (
       element.id === "next" &&
       projectID >= 0 &&
-      projectID <= projectLength - 2
+      projectID < projectLength - 1
     ) {
       setProjectID(projectID + 1);
-    } else if (element.id === "prev" && projectID > 0) {
+    } else if (
+      element.id === "prev" &&
+      projectID > 0 &&
+      projectID <= projectLength
+    ) {
       setProjectID(projectID - 1);
     }
   };
@@ -78,22 +88,25 @@ const ProjectSlider = (props: ExpandedProjectProps) => {
   return (
     <div>
       <div className="works__slider" data-aos="fade-up">
-        {!imagesAreLoaded ? (
-          <Blurhash
-            hash={props.expandedProject.image[projectID].hash}
-            width={imageSizes().imageWidth}
-            height={imageSizes().imageHeight}
-            resolutionX={32}
-            resolutionY={32}
-            punch={1}
-          ></Blurhash>
-        ) : (
-          <img
-            src={props.expandedProject.image[projectID].path}
-            loading="lazy"
-            alt={props.expandedProject.name}
-          />
-        )}
+        <div className="image__field" ref={imageFieldRef}>
+          {!imagesAreLoaded ? (
+            <Blurhash
+              hash={props.expandedProject.image[projectID].hash}
+              width={blurHashDimensions.width}
+              height={blurHashDimensions.height}
+              resolutionX={32}
+              resolutionY={32}
+              punch={1}
+            ></Blurhash>
+          ) : (
+            <img
+              className="project-image"
+              src={props.expandedProject.image[projectID].path}
+              loading="lazy"
+              alt={props.expandedProject.name}
+            />
+          )}
+        </div>
         <div className="works__slider__controller">
           <span
             className="controller__way prev"
