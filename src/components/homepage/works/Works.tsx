@@ -6,6 +6,7 @@ import projectData from "./helpers/projectData";
 
 interface ProjectStructure {
   avaliable: string;
+  link?: string;
   description: string;
   id: number;
   preview?: string;
@@ -27,6 +28,7 @@ function Works() {
     image: projectData[0].image,
     name: projectData[0].name,
     avaliable: projectData[0].avaliable,
+    link: projectData[0].link,
     description: projectData[0].description,
     year: projectData[0].year,
     type: projectData[0].type,
@@ -44,7 +46,7 @@ function Works() {
   };
 
   return (
-    <section className="works" id="projects">
+    <section className="works">
       <div className="works__text">
         <h3 className="works__text__tag" data-aos="fade-up">
           Últimos trabalhos
@@ -55,10 +57,7 @@ function Works() {
         </p>
       </div>
 
-      <ProjectSlider
-        expandedProject={expandedProject}
-        handleSetexpandedProject={handleSetexpandedProject}
-      />
+      <ProjectSlider expandedProject={expandedProject} />
 
       <ProjectDescription expandedProject={expandedProject} />
 

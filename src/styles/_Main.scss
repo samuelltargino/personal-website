@@ -1,69 +1,69 @@
-@import './Responsive';
-@import './Variables';
+@import "./Responsive";
+@import "./Variables";
 @import "./Mixins.scss";
-@import './keyframes.scss';
+@import "./keyframes.scss";
 
-
-
-.line{
-    width: 0%;
-    height: 3px;
-    background-color: $dividers;
-
+.line {
+  width: 0%;
+  height: 3px;
+  background-color: $dividers;
 }
 
-
-.fade-up-init{
-    animation: fade-up 400ms linear forwards;
+.fade-up-init {
+  animation: fade-up 400ms linear forwards;
 }
 
-.fill-in-init{
-    animation: fill-in 800ms linear forwards;
+.fill-in-init {
+  animation: fill-in 800ms linear forwards;
 }
 
-[data-aos='fade-up']{
-    transform: translateY(32px);
-    opacity: 0;
-    transition: transform 400ms linear, opacity 400ms linear;
+[data-aos="fade-up"] {
+  transform: translateY(32px);
+  opacity: 0;
+  transition: transform 400ms linear, opacity 400ms linear;
 }
 
-[data-aos='fill-in']{
-    width: 0%;
-    transition: width 400ms linear;
+[data-aos="fill-in"] {
+  width: 0%;
+  transition: width 400ms linear;
 }
 
-*{margin: 0; padding: 0;}
-
-html{
-    font-size: 62.5%;
-    scroll-behavior: smooth;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container{
-    width: 100%;
-    margin: 0 auto;
-    padding-top: 4.4rem;
-    
-    @include breakpoint(smaller){
-        max-width: $mobile;
-    }
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
 
-    @include breakpoint(medium){
-        max-width: $tablet;
-    }
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 4.4rem;
 
-    @include breakpoint(large){
-        max-width: $desktop;
-    }
+  @include breakpoint(smaller) {
+    max-width: $mobile;
+  }
 
-    header{
-        @include section-padding;
-    }
-    
-    main{
-        @include section-padding;
-        display: flex;
-        flex-direction: column;
-        gap: 26.4rem;
-    }
+  @include breakpoint(medium) {
+    max-width: $tablet;
+  }
+
+  @include breakpoint(large) {
+    max-width: $desktop;
+  }
+
+  header {
+    @include section-padding;
+  }
+
+  main {
+    @include section-padding;
+    display: flex;
+    flex-direction: column;
+    gap: 28.4rem;
+  }
 }

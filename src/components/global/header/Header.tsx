@@ -16,13 +16,7 @@ function Header(props: HeaderProps) {
   return (
     <div className="header">
       <div className="logo">
-        <svg
-          width="88"
-          height="76"
-          viewBox="0 0 88 76"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg viewBox="0 0 88 76" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M77.6728 57.0248L26.995 25.9502L11.7339 16.092L87.2921 0L85.4557 10.8866L38.7273 20.3318L36.7585 20.7099L58.1339 33.4241L79.5092 46.1383L77.6728 57.0248Z"
             fill=""

@@ -29,6 +29,7 @@ const data = [
     ],
     name: "Macedo Advogados",
     avaliable: "Behence",
+    link: 'https://www.behance.net/gallery/159532167/Macedo-Advogado-Website', 
     description:
       "Navegação facilitada para destacar a transmissão de informações às pessoas que não possuem conhecimento sobre seus direitos básicos, criando assim algo confortável e intuitivo, atingindo o objetivo da marca.",
     about:
@@ -69,6 +70,7 @@ const data = [
     ],
     name: "TaskSpace",
     avaliable: "Dribbble",
+    link: 'https://dribbble.com/shots/21341398-Taskspace-Project-Manager-Software',
     description:
       "Brand design para um sistema gerenciador de projetos, transparecendo organização e movimento, com cores que ressaltam a modernidade e tecnologia, além de uma tipografia com foco na leiturabilidade.",
     about:
@@ -109,6 +111,7 @@ const data = [
     ],
     name: "Kingdoms of Darkness",
     avaliable: "Dribbble",
+    link: 'https://dribbble.com/shots/20797764-Kingdoms-of-Darkness-Website',
     description:
       "Interface intuitiva e atraente, com o objetivo de inserir o usuário na estética obscura proposta pelo jogo, complementando e fortalecando a experiência do usuário.",
     about:
@@ -149,6 +152,7 @@ const data = [
     ],
     name: "Green Ville",
     avaliable: "Behence",
+    link: 'https://www.behance.net/gallery/149277791/Green-Ville',
     description:
       "Interface para um website de um condomínio que apresenta um foco nos programas interessantes, inclusive para atrair novos clientes, utilizando cores não tão fortes mas características, fortalecendo a mensagem da marca. O design foi moldado para atingir diretamente o público-alvo",
     about:
@@ -189,6 +193,7 @@ const data = [
     ],
     name: "Fusion",
     avaliable: "Dribbble",
+    link: 'https://dribbble.com/shots/21341420-Fusion-Gradient-Generator-Software', 
     description:
       "Utilizando formas quadradas com curvas suaves, além de uma tipografia que contempla a estética e compartilha das mesmas características de formas e curvas.",
     about:

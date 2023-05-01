@@ -1,7 +1,6 @@
-import React from "react";
 import "../../../styles/styles.scss";
 
-function About() {
+const About = () => {
   return (
     <section className="about" id="about">
       <div className="about__text">
@@ -66,6 +65,6 @@ function About() {
       </div>
     </section>
   );
-}
+};
 
 export default About;

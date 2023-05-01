@@ -1,77 +1,84 @@
+@keyframes appearing {
+  from {
+    transform: translateY(32px);
+    opacity: 0;
+  }
 
-@keyframes appearing{
-    from{
-        transform: translateY(32px);
-        opacity: 0;
-    }
-
-    to{
-        transform: translateY(0);
-        opacity: 1;
-    }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
+@keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
 
-@keyframes spinning{
-    from{
-        transform: rotate(0deg);
-    }
-    
-    to{
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
 
-// @keyframes menu-animation {
-//     from{
-//         &:nth-child(1){
-//             stroke: 2px;
-//         }
-//     }
-    
-// }
-
-@keyframes fill{
-    from{
-        fill: transparent
-    }
-
-    to{
-        fill: $primary-color;
-    }
+  to {
+    fill: $primary-color;
+  }
 }
-
 
 @keyframes fade-up {
-    from{
-        opacity: 0;
-        transform: translateY(32px);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes header-fade-down {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes header-fade-up {
+  0% {
+    position: fixed;
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-100px);
+    position: absolute;
+  }
 }
 
 @keyframes fill-in {
-    from{
-        width: 0%;
-    }
-    to{
-        width: 100%;
-    }
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes loader {
-    0% {
-      opacity: 1;
-    }
-    33% {
-      opacity: 0.2;
-    }
-    100% {
-      opacity: 1;
-    }
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-  

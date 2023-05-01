@@ -1,8 +1,9 @@
 import Button from "../../global/button/Button";
 import { Eye } from "react-feather";
 
-interface ProjectStructure {
+interface ProjectDescriptionStructure {
   avaliable: string;
+  link?: string;
   description: string;
   id: number;
   image: {
@@ -17,7 +18,7 @@ interface ProjectStructure {
 }
 
 type expandedProjectProps = {
-  expandedProject: ProjectStructure;
+  expandedProject: ProjectDescriptionStructure;
 };
 
 const ProjectDescription = (props: expandedProjectProps) => {
@@ -33,7 +34,13 @@ const ProjectDescription = (props: expandedProjectProps) => {
               Disponível no {props.expandedProject.avaliable}
             </p>
           </div>
-          <Button text={"Ver projeto"} icon={Eye} data-aos={"fade-up"}></Button>
+          <Button
+            text={"Ver projeto"}
+            link={props.expandedProject.link}
+            target={"_blank"}
+            icon={Eye}
+            data-aos={"fade-up"}
+          ></Button>
         </div>
         <div className="works__additional-info">
           <p

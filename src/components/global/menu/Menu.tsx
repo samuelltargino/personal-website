@@ -20,12 +20,17 @@ function Menu(props: MenuProps) {
 
     {
       href: "#a",
-      text: "Blog",
+      text: "Recursos",
     },
 
     {
       href: "#a",
-      text: "Recursos",
+      text: "Blog",
+    },
+
+    {
+      href: "#contact",
+      text: "Contato  ",
     },
   ];
 

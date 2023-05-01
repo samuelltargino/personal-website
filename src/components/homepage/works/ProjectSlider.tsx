@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef, useMemo } from "react";
 import { Blurhash } from "react-blurhash";
 
-interface ProjectStructure {
+interface ProjectSliderStructure {
   avaliable: string;
   description: string;
   id: number;
@@ -17,7 +17,7 @@ interface ProjectStructure {
 }
 
 type expandedProjectProps = {
-  expandedProject: ProjectStructure;
+  expandedProject: ProjectSliderStructure;
 };
 
 const loadImage = (src: string): Promise<HTMLImageElement> => {
@@ -104,6 +104,7 @@ const ProjectSlider = (props: expandedProjectProps) => {
             ></Blurhash>
           ) : (
             <img
+              id="projects"
               className="project-image"
               src={props.expandedProject.image[projectID].path}
               loading="lazy"

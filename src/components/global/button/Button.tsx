@@ -5,16 +5,17 @@ interface ButtonProps {
   event?: React.MouseEventHandler<HTMLButtonElement>;
   type?: "button" | "submit";
   link?: string;
+  target?: string;
   className?: string;
   disabled?: boolean;
-  text: string;
+  text?: string;
   icon: React.FC<React.SVGProps<SVGSVGElement>>;
 }
 
 function Button(props: ButtonProps) {
   const Icon = props.icon;
   return (
-    <a href={props.link}>
+    <a href={props.link} target={props.target}>
       <button
         type={props.type}
         className="button"

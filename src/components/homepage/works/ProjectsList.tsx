@@ -3,9 +3,10 @@ import Button from "../../global/button/Button";
 import { Plus } from "react-feather";
 import { ReactSVG } from "react-svg";
 
-interface ProjectStructure {
+interface ProjectListStructure {
   about?: string;
   avaliable: string;
+  link?: string;
   description: string;
   id: number;
   preview: string;
@@ -21,14 +22,14 @@ interface ProjectStructure {
 }
 
 interface PropsData {
-  newData: () => ProjectStructure[];
-  handleSetexpandedProject: (project: ProjectStructure) => void;
+  newData: () => ProjectListStructure[];
+  handleSetexpandedProject: (project: ProjectListStructure) => void;
 }
 
 const ProjectsList = (props: PropsData) => {
   return (
     <ul className="works__projects">
-      {props.newData().map((project: ProjectStructure, index: number) => (
+      {props.newData().map((project: ProjectListStructure, index: number) => (
         <li key={index} className="works__other-projects__layout">
           <div className="works__divider line" data-aos={"fill-in"}></div>
 
