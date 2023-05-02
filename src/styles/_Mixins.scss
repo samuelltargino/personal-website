@@ -1,6 +1,5 @@
-@import "./variables";
-@import "./responsive";
-@import "./keyframes";
+@use "responsive";
+@use "keyframes" as *;
 
 @mixin child-transition-delay {
   &:nth-child(1) {
@@ -52,15 +51,15 @@
 }
 
 @mixin section-padding {
-  @include breakpoint(smaller) {
+  @include responsive.breakpoint(smaller) {
     padding: 0 20px;
   }
 
-  @include breakpoint(medium) {
+  @include responsive.breakpoint(medium) {
     padding: 0 100px;
   }
 
-  @include breakpoint(large) {
+  @include responsive.breakpoint(large) {
     padding: 0 60px;
   }
 }

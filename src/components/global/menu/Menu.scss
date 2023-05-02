@@ -1,6 +1,6 @@
-@import "../../../styles/variables";
-@import "../../../styles/responsive";
-@import "../../../styles/mixins";
+@use "../../../styles/variables" as var;
+@use "../../../styles/responsive";
+@use "../../../styles/mixins" as mixin;
 
 .open-menu {
   display: flex;
@@ -8,8 +8,8 @@
   justify-content: center;
   transition: width 250ms linear, background 400ms linear;
 
-  @include breakpoint(smaller) {
-    background-color: $responsive-menu;
+  @include responsive.breakpoint(smaller) {
+    background-color: var.$responsive-menu;
     position: absolute;
     height: 100vh;
     width: 100%;
@@ -17,7 +17,7 @@
     right: 0;
   }
 
-  @include breakpoint(1300px) {
+  @include responsive.breakpoint(1300px) {
     background-color: transparent;
     position: static;
     height: 100vh;
@@ -30,7 +30,7 @@
     transform: translateY(0);
     transition: transform 500ms linear, opacity 490ms linear;
 
-    @include child-transition-delay;
+    @include mixin.child-transition-delay;
   }
 }
 
@@ -41,8 +41,8 @@
   transition: width 250ms linear;
   overflow: hidden;
 
-  @include breakpoint(smaller) {
-    background-color: $responsive-menu;
+  @include responsive.breakpoint(smaller) {
+    background-color: var.$responsive-menu;
     position: absolute;
     height: 100vh;
     width: 0;
@@ -50,7 +50,7 @@
     right: 0;
   }
 
-  @include breakpoint(1300px) {
+  @include responsive.breakpoint(1300px) {
     background-color: transparent;
     margin-top: 25px;
     position: static;
@@ -61,7 +61,7 @@
 
   .menu__link,
   .theme {
-    @include breakpoint(smaller) {
+    @include responsive.breakpoint(smaller) {
       opacity: 0;
       transform: translateY(32px);
       transition-delay: 0s;
@@ -70,17 +70,17 @@
 }
 
 ul {
-  @include breakpoint(smaller) {
-    width: $mobile;
+  @include responsive.breakpoint(smaller) {
+    width: var.$mobile;
     padding: 0 20px;
   }
 
-  @include breakpoint(medium) {
-    width: $tablet;
+  @include responsive.breakpoint(medium) {
+    width: var.$tablet;
     padding: 0 100px;
   }
 
-  @include breakpoint(1300px) {
+  @include responsive.breakpoint(1300px) {
     width: fit-content;
     margin: 0;
     gap: 3.2rem;
@@ -95,20 +95,20 @@ ul {
 
   .menu__link {
     cursor: pointer;
-    color: $text-color;
+    color: var.$text-color;
     display: flex;
     gap: 1.6rem;
     user-select: none; // TEMP
 
-    @include breakpoint(1300px) {
+    @include responsive.breakpoint(1300px) {
       width: fit-content;
       opacity: 0;
-      @include effect-of-appearing;
-      @include child-animation-delay;
+      @include mixin.effect-of-appearing;
+      @include mixin.child-animation-delay;
     }
 
     &:hover {
-      color: $primary-color;
+      color: var.$primary-color;
       transition: color 250ms linear;
 
       &:nth-child(n) {
@@ -117,7 +117,7 @@ ul {
     }
 
     svg {
-      @include breakpoint(medium) {
+      @include responsive.breakpoint(medium) {
         width: 28px;
         height: 28px;
       }
@@ -126,24 +126,24 @@ ul {
     .menu__link__item {
       text-decoration: none;
       position: relative;
-      font-size: $mobile-links;
-      color: $text-color;
+      font-size: var.$mobile-links;
+      color: var.$text-color;
 
-      @include breakpoint(medium) {
-        font-size: $tablet-links;
+      @include responsive.breakpoint(medium) {
+        font-size: var.$tablet-links;
       }
 
-      font-weight: $medium;
+      font-weight: var.$medium;
       padding-bottom: 0.8rem;
 
       &:hover {
-        color: $primary-color;
+        color: var.$primary-color;
         transition: color 250ms linear;
       }
 
       &::after {
         content: "";
-        background-color: $primary-color;
+        background-color: var.$primary-color;
         position: absolute;
         bottom: 0;
         left: 0;
@@ -163,16 +163,16 @@ ul {
     margin-top: 4.8rem;
     transition-delay: 700ms;
 
-    @include breakpoint(1300px) {
+    @include responsive.breakpoint(1300px) {
       display: none;
     }
 
     .--menu {
-      @include breakpoint(smaller) {
+      @include responsive.breakpoint(smaller) {
         display: flex;
       }
 
-      @include breakpoint(1300px) {
+      @include responsive.breakpoint(1300px) {
         display: none;
       }
     }

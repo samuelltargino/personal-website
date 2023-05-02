@@ -1,17 +1,16 @@
-@import "../../../styles/variables";
-@import "../../../styles/responsive";
-@import "../../../styles/mixins";
+@use "../../../styles/variables" as var;
+@use "../../../styles/mixins" as mixin;
 
 .theme-mode {
-  color: $primary-color;
+  color: var.$primary-color;
   display: flex;
   align-items: center;
   gap: 16px;
   cursor: pointer;
-  @include colors-transition;
+  @include mixin.colors-transition;
 
   svg {
-    color: $primary-color;
+    color: var.$primary-color;
     margin-bottom: 1px;
   }
 
@@ -19,19 +18,19 @@
     animation: spinning linear 400ms;
 
     circle {
-      @include fill-effect;
+      @include mixin.fill-effect;
     }
   }
 
   .moon {
     circle {
-      @include fill-effect;
+      @include mixin.fill-effect;
     }
   }
 
   span {
-    font-size: $mobile-section-text-large;
-    font-weight: $medium;
+    font-size: var.$mobile-section-text-large;
+    font-weight: var.$medium;
     text-transform: uppercase;
   }
 }

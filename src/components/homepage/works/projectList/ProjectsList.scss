@@ -1,6 +1,5 @@
-@import "../../../../styles/variables";
-@import "../../../../styles/responsive";
-@import "../../../../styles/mixins";
+@use "../../../../styles/variables" as var;
+@use "../../../../styles/responsive";
 
 .works__projects {
   width: 100%;
@@ -18,7 +17,7 @@
       display: flex;
       flex-direction: column;
 
-      @include breakpoint(1300px) {
+      @include responsive.breakpoint(1300px) {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -26,22 +25,22 @@
     }
     .project-preview {
       path {
-        fill: $primary-color;
+        fill: var.$primary-color;
       }
       margin-bottom: 2.4rem;
       width: 16rem;
 
-      @include breakpoint(1300px) {
+      @include responsive.breakpoint(1300px) {
         margin-bottom: 0rem;
       }
     }
 
     .project-description {
-      font-size: $mobile-section-text;
-      color: $text-color;
+      font-size: var.$mobile-section-text;
+      color: var.$text-color;
       margin-bottom: 3.2rem;
 
-      @include breakpoint(1300px) {
+      @include responsive.breakpoint(1300px) {
         width: 36%;
         margin-bottom: 0rem;
       }

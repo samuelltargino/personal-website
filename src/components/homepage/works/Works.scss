@@ -1,6 +1,4 @@
-@import "../../../styles/variables";
-@import "../../../styles/responsive";
-@import "../../../styles/mixins";
+@use "../../../styles/variables" as var;
 
 .works {
   .last-line {
@@ -14,16 +12,16 @@
     margin-bottom: 6.4rem;
 
     .works__text__tag {
-      font-size: $mobile-section-tag;
-      color: $title-color;
-      font-weight: $bold;
+      font-size: var.$mobile-section-tag;
+      color: var.$title-color;
+      font-weight: var.$bold;
       text-transform: uppercase;
       letter-spacing: 1.5px;
     }
 
     .works__text__subtitle {
-      font-size: $mobile-section-text-large;
-      color: $text-color;
+      font-size: var.$mobile-section-text-large;
+      color: var.$text-color;
     }
   }
 }

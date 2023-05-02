@@ -1,8 +1,8 @@
-@import "./variables";
+@use "variables" as var;
 
 body {
-  background-color: $bg-color;
+  background-color: var.$bg-color;
   transition: background 500ms linear, color 500ms linear;
-  font-family: $font;
+  font-family: var.$font;
   width: 100%;
 }

@@ -1,12 +1,12 @@
-@import "./responsive";
-@import "./variables";
-@import "./mixins";
-@import "./keyframes";
+@use "responsive";
+@use "variables" as var;
+@use "mixins" as mixin;
+@use "keyframes" as frame;
 
 .line {
   width: 0%;
   height: 3px;
-  background-color: $dividers;
+  background-color: var.$dividers;
 }
 
 .fade-up-init {
@@ -44,24 +44,24 @@ html {
   margin: 0 auto;
   padding-top: 4.4rem;
 
-  @include breakpoint(smaller) {
-    max-width: $mobile;
+  @include responsive.breakpoint(smaller) {
+    max-width: var.$mobile;
   }
 
-  @include breakpoint(medium) {
-    max-width: $tablet;
+  @include responsive.breakpoint(medium) {
+    max-width: var.$tablet;
   }
 
-  @include breakpoint(large) {
-    max-width: $desktop;
+  @include responsive.breakpoint(large) {
+    max-width: var.$desktop;
   }
 
   header {
-    @include section-padding;
+    @include mixin.section-padding;
   }
 
   main {
-    @include section-padding;
+    @include mixin.section-padding;
     display: flex;
     flex-direction: column;
     gap: 28.4rem;

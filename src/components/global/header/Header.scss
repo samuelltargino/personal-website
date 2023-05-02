@@ -1,9 +1,9 @@
-@import "../../../styles/variables";
-@import "../../../styles/responsive";
-@import "../../../styles/mixins";
+@use "../../../styles/variables" as var;
+@use "../../../styles/responsive";
+@use "../../../styles/mixins" as mixin;
 
 .header {
-  @include breakpoint(smaller) {
+  @include responsive.breakpoint(smaller) {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -11,7 +11,7 @@
     position: relative;
     opacity: 0;
     z-index: 999;
-    @include effect-of-appearing;
+    @include mixin.effect-of-appearing;
 
     .logo {
       display: flex;
@@ -22,8 +22,8 @@
         height: 100%;
 
         path {
-          fill: $primary-color;
-          @include colors-transition;
+          fill: var.$primary-color;
+          @include mixin.colors-transition;
         }
       }
     }
@@ -31,17 +31,17 @@
     .--header {
       user-select: none;
 
-      @include breakpoint(smaller) {
+      @include responsive.breakpoint(smaller) {
         display: none;
       }
 
-      @include breakpoint(1300px) {
+      @include responsive.breakpoint(1300px) {
         display: flex;
       }
     }
 
     .closed {
-      @include breakpoint(1300px) {
+      @include responsive.breakpoint(1300px) {
         display: none;
       }
 
@@ -49,8 +49,8 @@
       cursor: pointer;
 
       line {
-        color: $primary-color;
-        @include colors-transition;
+        color: var.$primary-color;
+        @include mixin.colors-transition;
       }
 
       line:nth-of-type(1) {
@@ -70,7 +70,7 @@
     }
 
     .open {
-      @include breakpoint(1300px) {
+      @include responsive.breakpoint(1300px) {
         display: none;
       }
 
@@ -78,8 +78,8 @@
       cursor: pointer;
 
       line {
-        color: $primary-color;
-        @include colors-transition;
+        color: var.$primary-color;
+        @include mixin.colors-transition;
       }
 
       line:nth-of-type(1) {

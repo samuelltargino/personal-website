@@ -1,6 +1,5 @@
-@import "../../../../styles/variables";
-@import "../../../../styles/responsive";
-@import "../../../../styles/mixins";
+@use "../../../../styles/variables" as var;
+@use "../../../../styles/responsive";
 
 .works__description {
   display: flex;
@@ -8,7 +7,7 @@
   gap: 10.4rem;
   margin-bottom: 16.4rem;
 
-  @include breakpoint(medium) {
+  @include responsive.breakpoint(medium) {
     flex-direction: row;
     gap: 0;
     justify-content: space-between;
@@ -25,29 +24,29 @@
       gap: 2.4rem;
 
       .works__overview__project-name {
-        font-size: $mobile-section-text-xlarge;
-        font-weight: $medium;
-        color: $primary-color;
+        font-size: var.$mobile-section-text-xlarge;
+        font-weight: var.$medium;
+        color: var.$primary-color;
       }
 
       .works__overview__avaliable {
-        font-size: $mobile-section-text-large;
-        color: $text-color;
+        font-size: var.$mobile-section-text-large;
+        color: var.$text-color;
       }
     }
   }
   .works__additional-info {
-    @include breakpoint(medium) {
+    @include responsive.breakpoint(medium) {
       width: 50%;
     }
 
-    @include breakpoint(1300px) {
+    @include responsive.breakpoint(1300px) {
       width: 40%;
     }
 
     .works__additional-info__description {
-      font-size: $mobile-section-text;
-      color: $text-color;
+      font-size: var.$mobile-section-text;
+      color: var.$text-color;
       margin-bottom: 5.6rem;
     }
     .works__additional-info__specifications {
@@ -58,14 +57,14 @@
       .data-sheet {
         display: flex;
         justify-content: space-between;
-        font-size: $mobile-section-text;
+        font-size: var.$mobile-section-text;
 
         .data-sheet-label {
-          color: $primary-color;
+          color: var.$primary-color;
         }
 
         .data-sheet-value {
-          color: $text-color;
+          color: var.$text-color;
         }
       }
     }

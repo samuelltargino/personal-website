@@ -1,14 +1,14 @@
-@import "../../../styles/variables";
-@import "../../../styles/mixins";
-@import "../../../styles/keyframes";
+@use "../../../styles/variables" as var;
+@use "../../../styles/mixins" as mixin;
+@use "../../../styles/keyframes" as *;
 
 a {
   text-decoration: none;
 
   .button {
     cursor: pointer;
-    font-family: $font;
-    font-weight: $bold;
+    font-family: var.$font;
+    font-weight: var.$bold;
     letter-spacing: 1.5px;
     border: none;
     outline: none;
@@ -16,23 +16,23 @@ a {
     height: 50.4px;
     width: fit-content;
     align-items: center;
-    background-color: $primary-color;
-    color: $bg-color;
+    background-color: var.$primary-color;
+    color: var.$bg-color;
     text-transform: uppercase;
     padding: 15.5px 0 15.5px 32px;
-    font-size: $button-font-size;
+    font-size: var.$button-font-size;
     gap: 16px;
     border-radius: 1px;
-    box-shadow: 0px 4px 4px $box-shadow;
+    box-shadow: 0px 4px 4px var.$box-shadow;
 
-    @include colors-transition;
+    @include mixin.colors-transition;
 
     &:hover {
-      background-color: $button-hover-color;
+      background-color: var.$button-hover-color;
       transition: background linear 250ms;
 
       .icon {
-        background-color: $icon-button-hover-color;
+        background-color: var.$icon-button-hover-color;
         transition: background linear 250ms;
       }
     }
@@ -42,16 +42,16 @@ a {
     }
 
     .icon {
-      color: $bg-color;
+      color: var.$bg-color;
       display: flex;
       align-items: center;
       border-top-right-radius: 1px;
       border-bottom-right-radius: 1px;
       padding: 0px 15px;
       height: 50.4px;
-      background-color: $icons-bg;
+      background-color: var.$icons-bg;
 
-      @include colors-transition;
+      @include mixin.colors-transition;
 
       .loader {
         :nth-child(1) {

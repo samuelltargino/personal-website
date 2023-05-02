@@ -1,19 +1,19 @@
-@import "../../../../styles/responsive";
-@import "../../../../styles/variables";
+@use "../../../../styles/responsive";
+@use "../../../../styles/variables" as var;
 
 .contact__display {
-  color: $primary-color;
-  font-size: $mobile-display;
+  color: var.$primary-color;
+  font-size: var.$mobile-display;
 
-  @include breakpoint(738px) {
+  @include responsive.breakpoint(738px) {
     width: 80%;
   }
 
-  @include breakpoint(1000px) {
+  @include responsive.breakpoint(1000px) {
     width: 85%;
   }
 
-  @include breakpoint(1300px) {
+  @include responsive.breakpoint(1300px) {
     width: 60%;
   }
 }
@@ -27,7 +27,7 @@
     width: 100%;
     justify-content: space-between;
 
-    @include breakpoint(768px) {
+    @include responsive.breakpoint(768px) {
       width: fit-content;
     }
   }
@@ -37,7 +37,7 @@
     flex-direction: column;
     gap: 3.2rem;
 
-    @include breakpoint(768px) {
+    @include responsive.breakpoint(768px) {
       flex-direction: row;
     }
   }
@@ -47,61 +47,61 @@
     flex-direction: column;
     gap: 8px;
 
-    @include breakpoint(768px) {
+    @include responsive.breakpoint(768px) {
       width: 100%;
     }
 
     label {
-      font-size: $mobile-section-text;
-      font-weight: $medium;
-      color: $primary-color;
+      font-size: var.$mobile-section-text;
+      font-weight: var.$medium;
+      color: var.$primary-color;
     }
 
     .label-error {
-      color: $error-color;
+      color: var.$error-color;
     }
 
     input,
     #phone-input {
       background-color: transparent;
-      color: $primary-color;
+      color: var.$primary-color;
 
-      border: 2px solid $strokes;
+      border: 2px solid var.$strokes;
       border-radius: 1px;
       padding: 18px 24px;
       transition: border 400ms linear;
 
       &:focus {
-        border: 2px solid $primary-color;
+        border: 2px solid var.$primary-color;
         outline: none;
         transition: border 400ms linear;
       }
     }
 
     textarea {
-      color: $primary-color;
+      color: var.$primary-color;
       background-color: transparent;
       resize: none;
       padding: 24px;
       height: 14rem;
-      border: 2px solid $strokes;
+      border: 2px solid var.$strokes;
       border-radius: 1px;
       transition: border 400ms linear;
 
       &:focus {
-        border: 2px solid $primary-color;
+        border: 2px solid var.$primary-color;
         outline: none;
         transition: border 400ms linear;
       }
     }
 
     .input-error {
-      border: 2px solid $error-color;
+      border: 2px solid var.$error-color;
     }
 
     .error {
-      color: $error-color;
-      font-size: $mobile-section-text;
+      color: var.$error-color;
+      font-size: var.$mobile-section-text;
     }
   }
 }

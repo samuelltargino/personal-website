@@ -1,4 +1,4 @@
-@import "../../../styles/variables";
+@use "../../../styles/variables" as var;
 
 .back-to-top {
   display: flex;
@@ -11,7 +11,7 @@
 
   .back-to-top-icon {
     cursor: pointer;
-    color: $primary-color;
+    color: var.$primary-color;
     padding: 0;
     border: none;
     background-color: transparent;
@@ -25,9 +25,9 @@
   }
 
   .back-to-top-text {
-    color: $primary-color;
-    font-size: $tooltip;
-    font-weight: $medium;
+    color: var.$primary-color;
+    font-size: var.$tooltip;
+    font-weight: var.$medium;
   }
 }
 

@@ -1,13 +1,11 @@
-@import "../../../styles/variables";
-@import "../../../styles/responsive";
-@import "../../../styles/mixins";
+@use "../../../styles/responsive";
 
 .contact {
   display: flex;
   flex-direction: column;
   gap: 22.4rem;
 
-  @include breakpoint(1000px) {
+  @include responsive.breakpoint(1000px) {
     padding: 0px 122px;
   }
 

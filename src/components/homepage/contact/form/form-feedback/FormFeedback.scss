@@ -1,40 +1,39 @@
-@import "../../../../../styles/variables";
-@import "../../../../../styles/responsive";
-@import "../../../../../styles/mixins";
+@use "../../../../../styles/variables" as var;
+@use "../../../../../styles/responsive";
 
 .feedback-container {
   .feedback-tag {
     display: flex;
     align-items: center;
     text-transform: uppercase;
-    font-weight: $medium;
+    font-weight: var.$medium;
     gap: 16px;
-    color: $text-color;
+    color: var.$text-color;
     margin-bottom: 1.6rem;
-    font-size: $button-font-size;
+    font-size: var.$button-font-size;
 
-    @include breakpoint(768px) {
-      font-size: $mobile-section-text;
+    @include responsive.breakpoint(768px) {
+      font-size: var.$mobile-section-text;
     }
   }
 
   .feedback-title {
-    font-size: $mobile-section-title;
-    color: $primary-color;
+    font-size: var.$mobile-section-title;
+    color: var.$primary-color;
     margin-bottom: 2.4rem;
 
-    @include breakpoint(768px) {
-      font-size: $tablet-display;
+    @include responsive.breakpoint(768px) {
+      font-size: var.$tablet-display;
     }
   }
 
   .feedback-text {
-    color: $text-color;
-    font-size: $mobile-section-text-large;
+    color: var.$text-color;
+    font-size: var.$mobile-section-text-large;
     margin-bottom: 6.4rem;
 
-    @include breakpoint(768px) {
-      font-size: $tablet-links;
+    @include responsive.breakpoint(768px) {
+      font-size: var.$tablet-links;
       width: 65%;
     }
   }

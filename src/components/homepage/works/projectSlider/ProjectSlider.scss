@@ -1,6 +1,4 @@
-@import "../../../../styles/variables";
-@import "../../../../styles/responsive";
-@import "../../../../styles/mixins";
+@use "../../../../styles/variables" as var;
 
 .works__slider {
   width: 100%;
@@ -26,9 +24,9 @@
     .controller__way {
       cursor: pointer;
       user-select: none;
-      font-size: $mobile-section-text-large;
-      color: $primary-color;
-      font-weight: $medium;
+      font-size: var.$mobile-section-text-large;
+      color: var.$primary-color;
+      font-weight: var.$medium;
       opacity: 0.6;
       transition: opacity 250ms linear;
 
@@ -47,7 +45,7 @@
         border-radius: 1;
         width: 8px;
         height: 8px;
-        background-color: $primary-color;
+        background-color: var.$primary-color;
         opacity: 0.3;
 
         &:active {
