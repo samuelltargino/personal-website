@@ -1,221 +1,29 @@
-@import '../../../styles/variables.scss';
-@import '../../../styles/responsive.scss';
-@import '../../../styles/mixins.scss';
+@import "../../../styles/variables";
+@import "../../../styles/responsive";
+@import "../../../styles/mixins";
 
+.works {
+  .last-line {
+    margin-top: 6.4rem;
+  }
 
+  .works__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    margin-bottom: 6.4rem;
 
-.works{
- 
-
-    .last-line{
-        margin-top: 6.4rem;
+    .works__text__tag {
+      font-size: $mobile-section-tag;
+      color: $title-color;
+      font-weight: $bold;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
     }
 
-    .works__text{
-        display: flex;
-        flex-direction: column;
-        gap: 2.4rem;
-        margin-bottom: 6.4rem;
-
-        .works__text__tag{
-            font-size: $mobile-section-tag;
-            color: $title-color;
-            font-weight: $bold;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
-
-        .works__text__subtitle{
-            font-size: $mobile-section-text-large;
-            color: $text-color;
-        }
+    .works__text__subtitle {
+      font-size: $mobile-section-text-large;
+      color: $text-color;
     }
-
-    .works__slider{
-        width: 100%;
-        margin-bottom: 8rem;
-
-        .image__field{
-            width: 100%;
-            height: 100%;
-
-            .project-image{
-                width: 100%;
-                height: 100%;
-                border-radius: 1px;
-            }
-        }
-
-        .works__slider__controller{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 3.2rem;
-
-            .controller__way{
-                cursor: pointer;
-                user-select: none;
-                font-size: $mobile-section-text-large;
-                color: $primary-color;
-                font-weight: $medium;
-                opacity: .6;
-                transition: opacity 250ms linear;
-
-                &:hover{
-                    opacity: 1;
-                    transition: opacity 250ms linear;
-                }
-            }
-
-            .controller__checkbox{
-                display: flex;
-                gap: 8px;
-
-                .checkbox{
-                    cursor: pointer;
-                    border-radius: 1;
-                    width: 8px;
-                    height: 8px;
-                    background-color: $primary-color;
-                    opacity: .3;
-
-                    &:active{
-                        opacity: 1;
-                    }
-                }
-
-                .checked{ 
-                    opacity: 1;
-                }
-                    
-
-            }
-            
-        }
-    }   
-
-    .works__description{
-        display: flex;
-        flex-direction: column;
-        gap: 10.4rem;
-        margin-bottom: 16.4rem;
-
-        @include breakpoint(medium){
-            flex-direction: row;
-            gap: 0;
-            justify-content: space-between;
-        }
-
-        .works__overview{
-                display: flex;
-                flex-direction: column;
-                gap: 5.6rem;
-                
-            .works__overview__status{
-                display: flex;
-                flex-direction: column;
-                gap: 2.4rem;
-
-                .works__overview__project-name{
-                    font-size: $mobile-section-text-xlarge;
-                    font-weight: $medium;
-                    color: $primary-color;
-                }
-    
-                .works__overview__avaliable{
-                    font-size: $mobile-section-text-large;
-                    color: $text-color;
-                }
-            }
-           
-        }
-        .works__additional-info{
-            @include breakpoint(medium){
-                width:50%;
-            }
-            
-            @include breakpoint(1300px){
-                width:40%;
-            }
-
-            .works__additional-info__description{
-                font-size: $mobile-section-text;
-                color: $text-color;
-                margin-bottom: 5.6rem;
-            }
-            .works__additional-info__specifications{
-                display: flex;
-                flex-direction: column;
-                gap: 32px;
-
-                .data-sheet{
-                    display: flex;
-                    justify-content: space-between;
-                    font-size: $mobile-section-text;
-                    
-                    .data-sheet-label{
-                        color: $primary-color;
-                    }
-                    
-                    .data-sheet-value{
-                        color: $text-color;
-                    }
-                
-                }
-            }
-
-            
-        }
-    }
-
-    .works__projects{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 6.4rem;
-        padding: 0;
-
-        .works__other-projects__layout{
-            display: flex;
-            flex-direction: column;
-            gap: 6.4rem;
-
-            .works__other-projects__content{
-                display: flex;
-                flex-direction: column;
-
-                @include breakpoint(1300px){
-                    flex-direction: row;
-                    justify-content: space-between;
-                    align-items: center;
-                }
-        
-            }
-            .project-preview{
-                path{
-                    fill: $primary-color;
-                }
-                margin-bottom: 2.4rem;
-                width: 16rem;
-                
-                @include breakpoint(1300px){
-                    margin-bottom: 0rem;
-
-                }
-            }
-
-            .project-description{
-                font-size: $mobile-section-text;
-                color: $text-color;
-                margin-bottom: 3.2rem;
-
-                @include breakpoint(1300px){
-                    width: 36%;
-                    margin-bottom: 0rem;
-
-                }
-            
-            }
-        }
-    }
+  }
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import Theme from "../theme/Theme";
+import "./Menu.scss";
 
 interface MenuProps {
   classKey: string;

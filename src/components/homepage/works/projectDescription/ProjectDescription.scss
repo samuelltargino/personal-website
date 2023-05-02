@@ -1,0 +1,73 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/responsive";
+@import "../../../../styles/mixins";
+
+.works__description {
+  display: flex;
+  flex-direction: column;
+  gap: 10.4rem;
+  margin-bottom: 16.4rem;
+
+  @include breakpoint(medium) {
+    flex-direction: row;
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .works__overview {
+    display: flex;
+    flex-direction: column;
+    gap: 5.6rem;
+
+    .works__overview__status {
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+
+      .works__overview__project-name {
+        font-size: $mobile-section-text-xlarge;
+        font-weight: $medium;
+        color: $primary-color;
+      }
+
+      .works__overview__avaliable {
+        font-size: $mobile-section-text-large;
+        color: $text-color;
+      }
+    }
+  }
+  .works__additional-info {
+    @include breakpoint(medium) {
+      width: 50%;
+    }
+
+    @include breakpoint(1300px) {
+      width: 40%;
+    }
+
+    .works__additional-info__description {
+      font-size: $mobile-section-text;
+      color: $text-color;
+      margin-bottom: 5.6rem;
+    }
+    .works__additional-info__specifications {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      .data-sheet {
+        display: flex;
+        justify-content: space-between;
+        font-size: $mobile-section-text;
+
+        .data-sheet-label {
+          color: $primary-color;
+        }
+
+        .data-sheet-value {
+          color: $text-color;
+        }
+      }
+    }
+  }
+}

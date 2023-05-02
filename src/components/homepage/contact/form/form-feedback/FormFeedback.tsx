@@ -1,5 +1,6 @@
 import { CheckSquare, CornerUpLeft } from "react-feather";
 import Button from "../../../../global/button/Button";
+import "./FormFeedback.scss";
 
 interface FormProps {
   setTheMessageWasSent: (value: boolean) => void;

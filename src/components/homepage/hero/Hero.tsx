@@ -1,11 +1,7 @@
 import Button from "../../global/button/Button";
 import Menu from "../../global/menu/Menu";
-
 import { ChevronRight } from "react-feather";
-
-// eslint-disable-next-line
-import "../../../styles/styles.scss";
-
+import "./Hero.scss";
 interface HeaderProps {
   classKey: string;
   handleExpandMenu: (element: string) => void;

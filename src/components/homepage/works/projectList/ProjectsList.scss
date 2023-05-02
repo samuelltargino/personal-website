@@ -1,0 +1,50 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/responsive";
+@import "../../../../styles/mixins";
+
+.works__projects {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6.4rem;
+  padding: 0;
+
+  .works__other-projects__layout {
+    display: flex;
+    flex-direction: column;
+    gap: 6.4rem;
+
+    .works__other-projects__content {
+      display: flex;
+      flex-direction: column;
+
+      @include breakpoint(1300px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+    .project-preview {
+      path {
+        fill: $primary-color;
+      }
+      margin-bottom: 2.4rem;
+      width: 16rem;
+
+      @include breakpoint(1300px) {
+        margin-bottom: 0rem;
+      }
+    }
+
+    .project-description {
+      font-size: $mobile-section-text;
+      color: $text-color;
+      margin-bottom: 3.2rem;
+
+      @include breakpoint(1300px) {
+        width: 36%;
+        margin-bottom: 0rem;
+      }
+    }
+  }
+}

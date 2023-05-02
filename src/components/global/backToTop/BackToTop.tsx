@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ArrowUp } from "react-feather";
+import "./BackToTop.scss";
 
 type BackToTopProps = {
   reffer: React.RefObject<HTMLElement>;

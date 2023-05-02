@@ -1,8 +1,9 @@
 import { useState } from "react";
-import ProjectsList from "./ProjectsList";
-import ProjectDescription from "./ProjectDescription";
-import ProjectSlider from "./ProjectSlider";
+import ProjectsList from "./projectList/ProjectsList";
+import ProjectDescription from "./projectDescription/ProjectDescription";
+import ProjectSlider from "./projectSlider/ProjectSlider";
 import projectData from "./helpers/projectData";
+import "./Works.scss";
 
 interface ProjectStructure {
   avaliable: string;

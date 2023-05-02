@@ -1,0 +1,8 @@
+@import "./variables";
+
+body {
+  background-color: $bg-color;
+  transition: background 500ms linear, color 500ms linear;
+  font-family: $font;
+  width: 100%;
+}

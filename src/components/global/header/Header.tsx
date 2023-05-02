@@ -1,6 +1,7 @@
 import React from "react";
 import { Menu } from "react-feather";
 import Theme from "../theme/Theme";
+import "./Header.scss";
 
 interface HeaderProps {
   classKey: string;

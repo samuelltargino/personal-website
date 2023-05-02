@@ -1,5 +1,5 @@
 import React from "react";
-// eslint-disable-next-line
+import "./Button.scss";
 
 interface ButtonProps {
   event?: React.MouseEventHandler<HTMLButtonElement>;

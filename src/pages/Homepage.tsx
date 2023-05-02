@@ -6,7 +6,6 @@ import About from "../components/homepage/about/About";
 import Contact from "../components/homepage/contact/Contact";
 import BackToTop from "../components/global/backToTop/BackToTop";
 import AOS from "../aos";
-import "../styles/styles.scss";
 AOS.init();
 
 const Homepage = () => {

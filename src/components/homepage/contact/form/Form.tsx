@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import emailjs from "@emailjs/browser";
+import "./Form.scss";
 
 interface FormProps {
   setTheMessageWasSent: (value: boolean) => void;

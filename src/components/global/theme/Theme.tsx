@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Circle, Sun } from "react-feather";
+import "./Theme.scss";
 
 interface ClassName {
   className: string;

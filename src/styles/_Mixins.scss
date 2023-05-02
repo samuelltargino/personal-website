@@ -1,6 +1,6 @@
-@import "./Variables";
-@import "./Responsive.scss";
-@import "./keyframes.scss";
+@import "./variables";
+@import "./responsive";
+@import "./keyframes";
 
 @mixin child-transition-delay {
   &:nth-child(1) {
@@ -32,6 +32,9 @@
   }
   &:nth-child(4) {
     animation-delay: 1600ms;
+  }
+  &:nth-child(5) {
+    animation-delay: 1950ms;
   }
 }
 

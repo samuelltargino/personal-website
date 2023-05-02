@@ -1,6 +1,6 @@
-@import "../../../styles/variables.scss";
-@import "../../../styles/responsive.scss";
-@import "../../../styles/mixins.scss";
+@import "../../../styles/variables";
+@import "../../../styles/responsive";
+@import "../../../styles/mixins";
 
 .hero {
   margin-bottom: 32.4rem;
@@ -35,13 +35,6 @@
       @include breakpoint(large) {
         width: 58%;
       }
-
-      // .hero__intro__tag{
-      //     color: $text-color;
-      //     text-transform: uppercase;
-      //     font-weight: $bold;
-      //     font-size: 1.4rem;
-      // }
 
       .hero__intro__title {
         color: $title-color;

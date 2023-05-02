@@ -1,5 +1,6 @@
-import Button from "../../global/button/Button";
+import Button from "../../../global/button/Button";
 import { Eye } from "react-feather";
+import "./ProjectDescription.scss";
 
 interface ProjectDescriptionStructure {
   avaliable: string;

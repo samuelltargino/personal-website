@@ -3,6 +3,7 @@ import Form from "./form/Form";
 import FormFeedback from "./form/form-feedback/FormFeedback";
 import Footer from "../../global/footer/Footer";
 import AOS from "../../../aos";
+import "./Contact.scss";
 
 const Contact = () => {
   const [theMessageWasSent, setTheMessageWasSent] = useState(false);

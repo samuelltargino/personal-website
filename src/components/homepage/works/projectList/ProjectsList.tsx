@@ -1,7 +1,7 @@
-import React from "react";
-import Button from "../../global/button/Button";
+import Button from "../../../global/button/Button";
 import { Plus } from "react-feather";
 import { ReactSVG } from "react-svg";
+import "./ProjectsList.scss";
 
 interface ProjectListStructure {
   about?: string;

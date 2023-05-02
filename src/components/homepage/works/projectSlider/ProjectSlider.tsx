@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef, useMemo } from "react";
 import { Blurhash } from "react-blurhash";
+import "./ProjectSlider.scss";
 
 interface ProjectSliderStructure {
   avaliable: string;

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Footer.scss";
 
 const Footer = () => {
   const [titleProp, setTitleProp] = useState(
