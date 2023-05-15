@@ -20,3 +20,6 @@
 [x] Implementar a funcionalidade de copiar o email no click
 [x] Consertar âncoras do menu
 [x] Consertar lentidão nas imagens
+
+
+

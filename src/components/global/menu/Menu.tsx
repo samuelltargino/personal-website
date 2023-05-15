@@ -19,15 +19,15 @@ function Menu(props: MenuProps) {
       text: "Projetos",
     },
 
-    {
-      href: "#a",
-      text: "Recursos",
-    },
+    // {
+    //   href: "#a",
+    //   text: "Recursos",
+    // },
 
-    {
-      href: "#a",
-      text: "Blog",
-    },
+    // {
+    //   href: "#a",
+    //   text: "Blog",
+    // },
 
     {
       href: "#contact",
