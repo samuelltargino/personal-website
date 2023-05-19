@@ -5,6 +5,8 @@ import taskSpaceSVG from '../../../../assets/images/projects/svg/taskspace.svg';
 import kingdomsOfDarknessSVG from '../../../../assets/images/projects/svg/kingdoms-of-darkness.svg';
 import fusionSVG from '../../../../assets/images/projects/svg/fusion.svg';
 import greenVilleSVG from '../../../../assets/images/projects/svg/green-ville.svg'
+import acordSVG from '../../../../assets/images/projects/svg/acord.svg'
+import articulateSVG from '../../../../assets/images/projects/svg/articulate.svg'
 
 // WEBP
 
@@ -38,43 +40,71 @@ import greenVilleWEBP_02 from "../../../../assets/images/projects/webp/green-vil
 import greenVilleWEBP_03 from "../../../../assets/images/projects/webp/green-ville_03.webp";
 import greenVilleWEBP_04 from "../../../../assets/images/projects/webp/green-ville_04.webp";
 
+// Articulate
+import articulateWEBP_01 from "../../../../assets/images/projects/webp/articulate_01.webp";
+import articulateWEBP_02 from "../../../../assets/images/projects/webp/articulate_02.webp";
+import articulateWEBP_03 from "../../../../assets/images/projects/webp/articulate_03.webp";
+import articulateWEBP_04 from "../../../../assets/images/projects/webp/articulate_04.webp";
+
+// acord
+import acordWEBP_01 from "../../../../assets/images/projects/webp/acord_01.webp";
+import acordWEBP_02 from "../../../../assets/images/projects/webp/acord_02.webp";
+import acordWEBP_03 from "../../../../assets/images/projects/webp/acord_03.webp";
+import acordWEBP_04 from "../../../../assets/images/projects/webp/acord_04.webp";
+
+
 const WEBP = {
   // Macedo Advogaodos
-  macedoAdvogadosWEBP_01: macedoAdvogadosWEBP_01,
-  macedoAdvogadosWEBP_02: macedoAdvogadosWEBP_02,
-  macedoAdvogadosWEBP_03: macedoAdvogadosWEBP_03,
-  macedoAdvogadosWEBP_04: macedoAdvogadosWEBP_04,
+  macedoAdvogadosWEBP_01,
+  macedoAdvogadosWEBP_02,
+  macedoAdvogadosWEBP_03,
+  macedoAdvogadosWEBP_04,
 
   // TaskSpace
-  taskspaceWEBP_01: taskspaceWEBP_01,
-  taskspaceWEBP_02: taskspaceWEBP_02,
-  taskspaceWEBP_03: taskspaceWEBP_03,
-  taskspaceWEBP_04: taskspaceWEBP_04,
+  taskspaceWEBP_01,
+  taskspaceWEBP_02,
+  taskspaceWEBP_03,
+  taskspaceWEBP_04,
 
   // Kingdoms of Darkness
-  kingdomsOfDarknessWEBP_01: kingdomsOfDarknessWEBP_01,
-  kingdomsOfDarknessWEBP_02: kingdomsOfDarknessWEBP_02,
-  kingdomsOfDarknessWEBP_03: kingdomsOfDarknessWEBP_03,
-  kingdomsOfDarknessWEBP_04: kingdomsOfDarknessWEBP_04,
+  kingdomsOfDarknessWEBP_01,
+  kingdomsOfDarknessWEBP_02,
+  kingdomsOfDarknessWEBP_03,
+  kingdomsOfDarknessWEBP_04,
 
   // Fusion
-  fusionWEBP_01: fusionWEBP_01,
-  fusionWEBP_02: fusionWEBP_02,
-  fusionWEBP_03: fusionWEBP_03,
-  fusionWEBP_04: fusionWEBP_04,
+  fusionWEBP_01,
+  fusionWEBP_02,
+  fusionWEBP_03,
+  fusionWEBP_04,
 
   // green-ville
-  greenVilleWEBP_01: greenVilleWEBP_01,
-  greenVilleWEBP_02: greenVilleWEBP_02,
-  greenVilleWEBP_03: greenVilleWEBP_03,
-  greenVilleWEBP_04: greenVilleWEBP_04,
+  greenVilleWEBP_01,
+  greenVilleWEBP_02,
+  greenVilleWEBP_03,
+  greenVilleWEBP_04,
+  
+  // articulate
+  articulateWEBP_01,
+  articulateWEBP_02,
+  articulateWEBP_03,
+  articulateWEBP_04,
+  
+  // acord
+  acordWEBP_01,
+  acordWEBP_02,
+  acordWEBP_03,
+  acordWEBP_04,
 };
+
 const SVG = {
-  macedoAdvogadosSVG: macedoAdvogadosSVG,
-  taskSpaceSVG: taskSpaceSVG,
-  kingdomsOfDarknessSVG: kingdomsOfDarknessSVG,
-  fusionSVG: fusionSVG,
-  greenVilleSVG: greenVilleSVG,
+  acordSVG,
+  articulateSVG,
+  macedoAdvogadosSVG,
+  taskSpaceSVG,
+  kingdomsOfDarknessSVG,
+  fusionSVG,
+  greenVilleSVG,
 };
 
 export { WEBP, SVG };

@@ -7,6 +7,80 @@ const data = [
     id: 0,
     image: [
       {
+        path: WEBP.acordWEBP_01,
+        id: 0,
+        hash: "L3Bez{4,5M^-DHkjXLM{0vkjxJwj",
+      },
+      {
+        path: WEBP.acordWEBP_02,
+        id: 1,
+        hash: "LEM%$h004--;0000_2~p8|?bWBM{",
+      },
+      {
+        path: WEBP.acordWEBP_03,
+        id: 2,
+        hash: "LLOg4[00_M%M0000oyt700agkBWB",
+      },
+      {
+        path: WEBP.acordWEBP_04,
+        id: 3,
+        hash: "L7C64ljJ00%300Eb_LsqImoe%4Rj",
+      },
+    ],
+    name: "Acord",
+    avaliable: "link abaixo",
+    link: 'https://gerenciadoracord.netlify.app/', 
+    description:
+      "Interface desenvolvida no Figma, utilizando fundamentos de design, unindo estratégias de captação de leads com o bom uso de elementos visuais. O projeto foi desenvolvido como case de estudo utilizando tecnologias como HTML, Sass e JavaScript.",
+    about:
+      "Landing page de um sistema de gerenciamento de colaboradores, para otimizar o fluxo de informações",
+    preview: SVG.acordSVG,
+    year: 2022,
+    type: "Projeto pessoal",
+    scope: "Desenvolvimento Web",
+  },
+  
+  {
+    id: 1,
+    image: [
+      {
+        path: WEBP.articulateWEBP_01,
+        id: 0,
+        hash: "LDCz|?xD0~EzA2R*XmWU68Nt}E,r",
+      },
+      {
+        path: WEBP.articulateWEBP_02,
+        id: 1,
+        hash: "LHS#SFys%#O?n3bvozjF*IShHswI",
+      },
+      {
+        path: WEBP.articulateWEBP_03,
+        id: 2,
+        hash: "LlRoNwL#rrtR*Ju4R*RPn%f+tStR",
+      },
+      {
+        path: WEBP.articulateWEBP_04,
+        id: 3,
+        hash: "LXSYjhozysensmfkbbf6pxaeVXof",
+      },
+    ],
+    name: "Articulate",
+    avaliable: "Dribbble",
+    link: 'https://dribbble.com/shots/21508088-Articulate-Project-Color-Finder-System', 
+    description:
+      "Logo desenvolvida utilizando traços marcantes, transmitindo uma sensação de organização e movimento, com um toque de modernidade e tecnologia. Além disso, utiliza a fonte Sinkin Sans como proposta moderna, harmonizando com o ícone e reforçando a identidade única e distintiva do projeto.",
+    about:
+      "Logo desenvolvida para um sistema localizador de cores para projetos utilizando inteligência artificial.",
+    preview: SVG.articulateSVG,
+    year: 2023,
+    type: "Projeto pessoal",
+    scope: "Brand Design",
+  },
+  
+  {
+    id: 2,
+    image: [
+      {
         path: WEBP.macedoAdvogadosWEBP_01,
         id: 0,
         hash: "L9OD:{?wt.00_NITRP.9?bt7IUR*",
@@ -31,9 +105,9 @@ const data = [
     avaliable: "Behence",
     link: 'https://www.behance.net/gallery/159532167/Macedo-Advogado-Website', 
     description:
-      "Navegação facilitada para destacar a transmissão de informações às pessoas que não possuem conhecimento sobre seus direitos básicos, criando assim algo confortável e intuitivo, atingindo o objetivo da marca.",
+      "Interface desenvolvida com a proposta de uma navegação facilitada para destacar a transmissão de informações às pessoas que não possuem conhecimento sobre seus direitos básicos, criando assim algo confortável e intuitivo, atingindo o objetivo da marca.",
     about:
-      "Interface de um website para um escritório de advocacia amplo e especialista em soluções",
+      "Interface de um website para um escritório de advocacia amplo e especialista em soluções.",
     preview: SVG.macedoAdvogadosSVG,
     year: 2022,
     type: "Projeto pessoal",
@@ -41,7 +115,7 @@ const data = [
   },
 
   {
-    id: 1,
+    id: 3,
     image: [
       {
         path: WEBP.taskspaceWEBP_01,
@@ -82,7 +156,7 @@ const data = [
   },
 
   {
-    id: 2,
+    id: 4,
     image: [
       {
         path: WEBP.kingdomsOfDarknessWEBP_01,
@@ -113,9 +187,9 @@ const data = [
     avaliable: "Dribbble",
     link: 'https://dribbble.com/shots/20797764-Kingdoms-of-Darkness-Website',
     description:
-      "Interface intuitiva e atraente, com o objetivo de inserir o usuário na estética obscura proposta pelo jogo, complementando e fortalecando a experiência do usuário.",
+      "Interface intuitiva e atraente, com o objetivo de inserir o usuário na estética obscura e desafiante proposta pelo jogo, utiliza imagens intrigantes e modernas, que utilizam as cores propostas pela identidade do projeto, complementando e fortalecando a experiência do usuário.",
     about:
-      "Página de captura para um jogo de fantasia e sobrevivência, ambientada em uma temática obscura",
+      "Página de captura para um jogo de fantasia e sobrevivência, ambientada em uma temática obscura.",
     preview: SVG.kingdomsOfDarknessSVG,
     year: 2022,
     type: "Projeto pessoal",
@@ -123,7 +197,7 @@ const data = [
   },
 
   {
-    id: 3,
+    id: 5,
     image: [
       {
         path: WEBP.greenVilleWEBP_01,
@@ -164,7 +238,7 @@ const data = [
   },
 
   {
-    id: 4,
+    id: 6,
     image: [
       {
         path: WEBP.fusionWEBP_01,
