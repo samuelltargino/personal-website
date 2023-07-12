@@ -1,0 +1,107 @@
+@use "../../../../styles/responsive";
+@use "../../../../styles/variables" as var;
+
+.contact__display {
+  color: var.$primary-color;
+  font-size: var.$mobile-display;
+
+  @include responsive.breakpoint(738px) {
+    width: 80%;
+  }
+
+  @include responsive.breakpoint(1000px) {
+    width: 85%;
+  }
+
+  @include responsive.breakpoint(1300px) {
+    width: 60%;
+  }
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+
+  .button {
+    width: 100%;
+    justify-content: space-between;
+
+    @include responsive.breakpoint(768px) {
+      width: fit-content;
+    }
+  }
+
+  .contact__form__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+
+    @include responsive.breakpoint(768px) {
+      flex-direction: row;
+    }
+  }
+
+  .contact__form__input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @include responsive.breakpoint(768px) {
+      width: 100%;
+    }
+
+    label {
+      font-size: var.$mobile-section-text;
+      font-weight: var.$medium;
+      color: var.$primary-color;
+    }
+
+    .label-error {
+      color: var.$error-color;
+    }
+
+    input,
+    #phone-input {
+      background-color: transparent;
+      color: var.$primary-color;
+
+      border: 2px solid var.$strokes;
+      border-radius: 1px;
+      padding: 18px 24px;
+      transition: border 400ms linear;
+
+      &:focus {
+        border: 2px solid var.$primary-color;
+        outline: none;
+        transition: border 400ms linear;
+      }
+    }
+
+    textarea {
+      color: var.$primary-color;
+      background-color: transparent;
+      resize: none;
+      padding: 24px;
+      height: 14rem;
+      border: 2px solid var.$strokes;
+      border-radius: 1px;
+      transition: border 400ms linear;
+
+      &:focus {
+        border: 2px solid var.$primary-color;
+        outline: none;
+        transition: border 400ms linear;
+      }
+    }
+
+    .input-error {
+      border: 2px solid var.$error-color;
+    }
+
+    .error {
+      color: var.$error-color;
+      font-size: var.$mobile-section-text;
+    }
+  }
+}

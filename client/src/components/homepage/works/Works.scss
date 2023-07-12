@@ -1,0 +1,27 @@
+@use "../../../styles/variables" as var;
+
+.works {
+  .last-line {
+    margin-top: 6.4rem;
+  }
+
+  .works__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    margin-bottom: 6.4rem;
+
+    .works__text__tag {
+      font-size: var.$mobile-section-tag;
+      color: var.$title-color;
+      font-weight: var.$bold;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .works__text__subtitle {
+      font-size: var.$mobile-section-text-large;
+      color: var.$text-color;
+    }
+  }
+}

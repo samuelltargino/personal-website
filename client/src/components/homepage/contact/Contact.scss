@@ -1,0 +1,17 @@
+@use "../../../styles/responsive";
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 22.4rem;
+
+  @include responsive.breakpoint(1000px) {
+    padding: 0px 122px;
+  }
+
+  .contact__container {
+    display: flex;
+    flex-direction: column;
+    gap: 9rem;
+  }
+}

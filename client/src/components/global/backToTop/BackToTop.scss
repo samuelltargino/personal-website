@@ -1,0 +1,38 @@
+@use "../../../styles/variables" as var;
+
+.back-to-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+
+  .back-to-top-icon {
+    cursor: pointer;
+    color: var.$primary-color;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    opacity: 1;
+    transition: opacity 150ms linear;
+  }
+
+  .hidden {
+    opacity: 0;
+    transition: opacity 150ms linear;
+  }
+
+  .back-to-top-text {
+    color: var.$primary-color;
+    font-size: var.$tooltip;
+    font-weight: var.$medium;
+  }
+}
+
+.back-to-top-responsive {
+  position: static;
+  margin-bottom: 3.2rem;
+  width: 100%;
+}

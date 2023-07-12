@@ -1,0 +1,8 @@
+@use "variables" as var;
+
+body {
+  background-color: var.$bg-color;
+  transition: background 500ms linear, color 500ms linear;
+  font-family: var.$font;
+  width: 100%;
+}

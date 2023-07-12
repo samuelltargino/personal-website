@@ -1,0 +1,36 @@
+@use "../../../styles/variables" as var;
+@use "../../../styles/mixins" as mixin;
+
+.theme-mode {
+  color: var.$primary-color;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  @include mixin.colors-transition;
+
+  svg {
+    color: var.$primary-color;
+    margin-bottom: 1px;
+  }
+
+  .sun {
+    animation: spinning linear 400ms;
+
+    circle {
+      @include mixin.fill-effect;
+    }
+  }
+
+  .moon {
+    circle {
+      @include mixin.fill-effect;
+    }
+  }
+
+  span {
+    font-size: var.$mobile-section-text-large;
+    font-weight: var.$medium;
+    text-transform: uppercase;
+  }
+}

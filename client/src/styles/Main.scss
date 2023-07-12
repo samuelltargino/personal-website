@@ -1,0 +1,69 @@
+@use "responsive";
+@use "variables" as var;
+@use "mixins" as mixin;
+@use "keyframes" as frame;
+
+.line {
+  width: 0%;
+  height: 3px;
+  background-color: var.$dividers;
+}
+
+.fade-up-init {
+  animation: fade-up 400ms linear forwards;
+}
+
+.fill-in-init {
+  animation: fill-in 800ms linear forwards;
+}
+
+[data-aos="fade-up"] {
+  transform: translateY(32px);
+  opacity: 0;
+  transition: transform 400ms linear, opacity 400ms linear;
+}
+
+[data-aos="fill-in"] {
+  width: 0%;
+  transition: width 400ms linear;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 4.4rem;
+
+  @include responsive.breakpoint(smaller) {
+    max-width: var.$mobile;
+  }
+
+  @include responsive.breakpoint(medium) {
+    max-width: var.$tablet;
+  }
+
+  @include responsive.breakpoint(large) {
+    max-width: var.$desktop;
+  }
+
+  header {
+    @include mixin.section-padding;
+  }
+
+  main {
+    @include mixin.section-padding;
+    display: flex;
+    flex-direction: column;
+    gap: 28.4rem;
+  }
+}

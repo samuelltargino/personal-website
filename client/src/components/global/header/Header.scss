@@ -1,0 +1,96 @@
+@use "../../../styles/variables" as var;
+@use "../../../styles/responsive";
+@use "../../../styles/mixins" as mixin;
+
+.header {
+  @include responsive.breakpoint(smaller) {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    opacity: 0;
+    z-index: 999;
+    @include mixin.effect-of-appearing;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      height: 48px;
+
+      svg {
+        height: 100%;
+
+        path {
+          fill: var.$primary-color;
+          @include mixin.colors-transition;
+        }
+      }
+    }
+
+    .--header {
+      user-select: none;
+
+      @include responsive.breakpoint(smaller) {
+        display: none;
+      }
+
+      @include responsive.breakpoint(1300px) {
+        display: flex;
+      }
+    }
+
+    .closed {
+
+      z-index: 999;
+      cursor: pointer;
+
+      line {
+        color: var.$primary-color;
+        @include mixin.colors-transition;
+      }
+
+      line:nth-of-type(1) {
+        opacity: 1;
+        transition: opacity 80ms linear;
+      }
+
+      line:nth-of-type(2) {
+        transition: transform 250ms linear;
+        transform: rotate(0deg) translate(0, 0);
+      }
+
+      line:nth-of-type(3) {
+        transition: transform 250ms linear;
+        transform: rotate(0deg) translate(0, 0);
+      }
+    }
+
+    .open {
+      
+
+      z-index: 999;
+      cursor: pointer;
+
+      line {
+        color: var.$primary-color;
+        @include mixin.colors-transition;
+      }
+
+      line:nth-of-type(1) {
+        opacity: 0;
+        transition: opacity 80ms linear;
+      }
+
+      line:nth-of-type(2) {
+        transition: transform 250ms linear;
+        transform: rotate(45deg) translate(25%, -25%);
+      }
+
+      line:nth-of-type(3) {
+        transition: transform 250ms linear;
+        transform: rotate(-45deg) translate(-50%, 0);
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@use "../../../../../styles/variables" as var;
+@use "../../../../../styles/responsive";
+
+.feedback-container {
+  .feedback-tag {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: var.$medium;
+    gap: 16px;
+    color: var.$text-color;
+    margin-bottom: 1.6rem;
+    font-size: var.$button-font-size;
+
+    @include responsive.breakpoint(768px) {
+      font-size: var.$mobile-section-text;
+    }
+  }
+
+  .feedback-title {
+    font-size: var.$mobile-section-title;
+    color: var.$primary-color;
+    margin-bottom: 2.4rem;
+
+    @include responsive.breakpoint(768px) {
+      font-size: var.$tablet-display;
+    }
+  }
+
+  .feedback-text {
+    color: var.$text-color;
+    font-size: var.$mobile-section-text-large;
+    margin-bottom: 6.4rem;
+
+    @include responsive.breakpoint(768px) {
+      font-size: var.$tablet-links;
+      width: 65%;
+    }
+  }
+}

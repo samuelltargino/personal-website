@@ -1,0 +1,105 @@
+@use "../../../styles/variables" as var;
+@use "../../../styles/responsive";
+@use "../../../styles/mixins" as mixin;
+
+.hero {
+  margin-bottom: 32.4rem;
+  margin-top: 18.4rem;
+
+  .hero__intro {
+    display: flex;
+    justify-content: space-between;
+
+    .hero__line__container {
+      width: 30%;
+    }
+    .line {
+      margin-top: 20.4rem;
+      height: 3px;
+      background-color: var.$primary-color;
+    }
+
+    .hero__intro__text {
+      @include responsive.breakpoint(smaller) {
+        width: 340px;
+      }
+
+      @include responsive.breakpoint(500px) {
+        width: 380px;
+      }
+
+      @include responsive.breakpoint(medium) {
+        width: 563px;
+      }
+
+      @include responsive.breakpoint(large) {
+        width: 58%;
+      }
+
+      .hero__intro__tag{
+        text-transform: uppercase;
+        color: var.$text-color;
+        font-size: 1.6rem;
+        font-weight: var.$bold;
+        letter-spacing: 0.126rem;
+      }
+
+      .hero__intro__title {
+        color: var.$title-color;
+        line-height: var.$title-height;
+        font-weight: var.$bold;
+        margin-bottom: 2.4rem;
+        margin-top: 1.6rem;
+        opacity: 0;
+        @include mixin.colors-transition;
+
+        @include mixin.effect-of-appearing;
+        animation-delay: 550ms;
+
+        @include responsive.breakpoint(smaller) {
+          font-size: var.$mobile-display;
+          width: 100%;
+        }
+
+        @include responsive.breakpoint(medium) {
+          font-size: var.$tablet-display;
+        }
+
+        @include responsive.breakpoint(large) {
+          font-size: var.$desktop-display;
+        }
+      }
+
+      .hero__intro__text {
+        color: var.$text-color;
+        line-height: var.$text-height;
+        font-weight: var.$regular;
+        margin-bottom: 5.6rem;
+        opacity: 0;
+        @include mixin.colors-transition;
+
+        @include mixin.effect-of-appearing;
+        animation-delay: 900ms;
+
+        @include responsive.breakpoint(smaller) {
+          font-size: var.$mobile-section-text-large;
+        }
+
+        @include responsive.breakpoint(medium) {
+          font-size: var.$mobile-section-text-xlarge;
+          width: 90%;
+        }
+
+        @include responsive.breakpoint(large) {
+          width: 80%;
+        }
+      }
+
+      .button {
+        @include mixin.effect-of-appearing;
+        opacity: 0;
+        animation-delay: 1250ms;
+      }
+    }
+  }
+}

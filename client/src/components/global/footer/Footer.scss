@@ -1,0 +1,95 @@
+@use "../../../styles/responsive";
+@use "../../../styles/variables" as var;
+
+.footer {
+  .line {
+    margin-bottom: 6.4rem;
+  }
+
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+    gap: 10.8rem;
+    margin-bottom: 6.4rem;
+
+    @include responsive.breakpoint(768px) {
+      gap: 0;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 3.2rem;
+
+      @include responsive.breakpoint(768px) {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      label {
+        font-size: var.$mobile-section-text-xlarge;
+        font-weight: var.$medium;
+        color: var.$primary-color;
+      }
+
+      .social-links__links-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+
+        @include responsive.breakpoint(768px) {
+          flex-direction: row;
+        }
+
+        a {
+          color: var.$primary-color;
+          font-size: var.$mobile-section-text-large;
+          opacity: 0.6;
+          transition: opacity 400ms linear;
+
+          &:hover {
+            opacity: 1;
+            transition: opacity 400ms linear;
+          }
+        }
+      }
+    }
+
+    .footer__contact {
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
+      text-align: center;
+      align-items: center;
+
+      @include responsive.breakpoint(768px) {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      label {
+        color: var.$primary-color;
+        font-size: var.$mobile-section-text-xlarge;
+        font-weight: var.$medium;
+      }
+
+      p {
+        cursor: pointer;
+        font-family: var.$font;
+        font-size: var.$mobile-section-text-large;
+        color: var.$primary-color;
+        opacity: 0.6;
+
+        transition: opacity 400ms linear;
+
+        &:hover {
+          opacity: 1;
+          transition: opacity 400ms linear;
+        }
+      }
+    }
+  }
+}

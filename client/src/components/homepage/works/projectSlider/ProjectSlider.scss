@@ -1,0 +1,61 @@
+@use "../../../../styles/variables" as var;
+
+.works__slider {
+  width: 100%;
+  margin-bottom: 8rem;
+
+  .image__field {
+    width: 100%;
+    height: 100%;
+
+    .project-image {
+      width: 100%;
+      height: 100%;
+      border-radius: 1px;
+    }
+  }
+
+  .works__slider__controller {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3.2rem;
+
+    .controller__way {
+      cursor: pointer;
+      user-select: none;
+      font-size: var.$mobile-section-text-large;
+      color: var.$primary-color;
+      font-weight: var.$medium;
+      opacity: 0.6;
+      transition: opacity 250ms linear;
+
+      &:hover {
+        opacity: 1;
+        transition: opacity 250ms linear;
+      }
+    }
+
+    .controller__checkbox {
+      display: flex;
+      gap: 8px;
+
+      .checkbox {
+        cursor: pointer;
+        border-radius: 1;
+        width: 8px;
+        height: 8px;
+        background-color: var.$primary-color;
+        opacity: 0.3;
+
+        &:active {
+          opacity: 1;
+        }
+      }
+
+      .checked {
+        opacity: 1;
+      }
+    }
+  }
+}
