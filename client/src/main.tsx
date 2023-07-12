@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Resources from "./pages/Resources";
 import { IconClassContextProvider } from "./contexts/IconClassContext";
+import { WindowSizeContextProvider } from "./contexts/WindowSizeContext";
+import { ResponsiveContextProvider } from "./contexts/ResponsiveContext";
 
 const router = createBrowserRouter([
   {
@@ -18,8 +20,12 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <IconClassContextProvider>
-      <RouterProvider router={router} />
-    </IconClassContextProvider>
+    <WindowSizeContextProvider>
+      <ResponsiveContextProvider>
+        <IconClassContextProvider>
+          <RouterProvider router={router} />
+        </IconClassContextProvider>
+      </ResponsiveContextProvider>
+    </WindowSizeContextProvider>
   </React.StrictMode>
 );

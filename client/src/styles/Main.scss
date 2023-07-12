@@ -56,10 +56,6 @@ html {
     max-width: var.$desktop;
   }
 
-  header {
-    @include mixin.section-padding;
-  }
-
   main {
     @include mixin.section-padding;
     display: flex;

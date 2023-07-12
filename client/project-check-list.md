@@ -4,14 +4,14 @@
 
 ## Doing
 
-[-] Header adaptativo
-[-] Componentes da página de recursos
-[-] Backend
-[-] Consumo da API
-[-] Componente do modal e suas funcionalidades
-[-] Build do projeto
-[-] Análise e aperfeiçoamento de performace e SEO
-[-] Testes de usabilidade
+[-] Header adaptativo 2x
+[-] Componentes da página de recursos 1x
+[-] Backend 1x
+[-] Consumo da API 1x
+[-] Componente do modal e suas funcionalidades 1x
+[-] Build do projeto 1x
+[-] Análise e aperfeiçoamento de performace e SEO 1x
+[-] Testes de usabilidade 2x
 
 ## Done
 

@@ -12,6 +12,8 @@
     opacity: 0;
     z-index: 999;
     @include mixin.effect-of-appearing;
+    @include mixin.section-padding;
+
 
     .logo {
       display: flex;
@@ -45,6 +47,7 @@
       z-index: 999;
       cursor: pointer;
 
+
       line {
         color: var.$primary-color;
         @include mixin.colors-transition;
@@ -68,10 +71,11 @@
 
     .open {
       
-
       z-index: 999;
       cursor: pointer;
-
+      
+ 
+      
       line {
         color: var.$primary-color;
         @include mixin.colors-transition;

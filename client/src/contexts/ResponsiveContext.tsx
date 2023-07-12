@@ -16,6 +16,10 @@ export const ResponsiveContextProvider = ({
   const [isResponsive, setIsResponsive] = useState(false);
   const { windowSize } = useWindowSize();
 
+  useEffect(() => {
+    windowSize.width < 1300 ? setIsResponsive(true) : setIsResponsive(false);
+  }, [windowSize.width]);
+
   return (
     <ResponsiveContext.Provider value={{ isResponsive, setIsResponsive }}>
       {children}

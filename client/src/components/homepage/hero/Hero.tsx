@@ -2,14 +2,12 @@ import Button from "../../global/button/Button";
 import Menu from "../../global/menu/Menu";
 import { ChevronRight } from "react-feather";
 import "./Hero.scss";
+import { useResponsive } from "../../../hooks/useResponsive";
+import ResponsiveMenu from "../../global/menu/responsiveMenu/ResponsiveMenu";
 import { useIconClass } from "../../../hooks/useIconClass";
 
-interface HeaderProps {
-  handleExpandMenu: (element: string) => void;
-}
-
-function Hero(props: HeaderProps) {
-  const { iconClass } = useIconClass();
+function Hero() {
+  const { isResponsive } = useResponsive();
 
   return (
     <div className="hero">
@@ -32,10 +30,7 @@ function Hero(props: HeaderProps) {
             <div className="divider line" data-aos="fill-in"></div>
           </div>
         </div>
-        <Menu
-          classKey={iconClass + "-menu"}
-          handleExpandMenu={props.handleExpandMenu}
-        ></Menu>
+        {isResponsive ? <ResponsiveMenu /> : <Menu />}
       </div>
     </div>
   );

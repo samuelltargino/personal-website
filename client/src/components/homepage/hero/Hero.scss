@@ -5,7 +5,8 @@
 .hero {
   margin-bottom: 32.4rem;
   margin-top: 18.4rem;
-
+  @include mixin.section-padding;
+  
   .hero__intro {
     display: flex;
     justify-content: space-between;

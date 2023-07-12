@@ -2,72 +2,6 @@
 @use "../../../styles/responsive";
 @use "../../../styles/mixins" as mixin;
 
-.open-menu {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  transition: width 250ms linear, background 400ms linear;
-
-  @include responsive.breakpoint(smaller) {
-    background-color: var.$responsive-menu;
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    top: 0;
-    right: 0;
-  }
-
-  @include responsive.breakpoint(1300px) {
-    background-color: transparent;
-    position: static;
-    height: 100vh;
-    width: 100%;
-  }
-
-  .menu__link,
-  .theme {
-    opacity: 1;
-    transform: translateY(0);
-    transition: transform 500ms linear, opacity 490ms linear;
-
-    @include mixin.child-transition-delay;
-  }
-}
-
-.closed-menu {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  transition: width 250ms linear;
-  overflow: hidden;
-
-  @include responsive.breakpoint(smaller) {
-    background-color: var.$responsive-menu;
-    position: absolute;
-    height: 100vh;
-    width: 0;
-    top: 0;
-    right: 0;
-  }
-
-  @include responsive.breakpoint(1300px) {
-    background-color: transparent;
-    margin-top: 6.6rem;
-    position: static;
-    height: fit-content;
-    width: fit-content;
-    overflow: initial;
-  }
-
-  .menu__link,
-  .theme {
-    @include responsive.breakpoint(smaller) {
-      opacity: 0;
-      transform: translateY(32px);
-      transition-delay: 0s;
-    }
-  }
-}
 
 ul {
   @include responsive.breakpoint(smaller) {
@@ -91,7 +25,7 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
-  margin-bottom: 9.6rem;
+  margin-bottom: 18.12rem;
 
   .menu__link {
     cursor: pointer;
@@ -177,4 +111,9 @@ ul {
       }
     }
   }
+}
+
+.--resources{
+  flex-direction: row;
+  align-items: center;
 }
